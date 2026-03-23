@@ -3,9 +3,9 @@
 import json, os, requests
 from datetime import date, datetime
 
-BOT_TOKEN  = os.environ["TELEGRAM_BOT_TOKEN"]
-CHAT_ID    = os.environ["TELEGRAM_CHAT_ID"]
-API_URL    = f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage"
+BOT_TOKEN = os.environ["TELEGRAM_BOT_TOKEN"]
+CHAT_ID   = os.environ["TELEGRAM_CHAT_ID"]
+API_URL   = f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage"
 START_DATE = date(2026, 3, 23)
 
 DAY_MAP = {
@@ -20,7 +20,7 @@ def send(text):
 def get_week_day():
     today = date.today()
     delta = (today - START_DATE).days
-    week_num  = (delta // 7) + 1
+    week_num = (delta // 7) + 1
     day_short = DAY_MAP[today.weekday()]
     study_day = delta + 1
     return week_num, day_short, study_day
@@ -31,7 +31,7 @@ def load_roadmap():
         return json.load(f)
 
 def load_resources():
-    path = os.path.join(os.path.dirname(__file__), "../roadmap/daily_resources")
+    path = os.path.join(os.path.dirname(__file__), "../roadmap/daily_resources.json")
     try:
         with open(path) as f:
             return json.load(f)
@@ -82,7 +82,7 @@ if __name__ == "__main__":
                 res_text = "\n\U0001f4d6 <b>Learning Resources</b>\n"
                 if "udemy" in res:
                     res_text += f"  \U0001f393 <b>Udemy:</b> {res['udemy']['course']}\n"
-                    res_text += f"      Section: {res['udemy']['section']}\n"
+                    res_text += f"  Section: {res['udemy']['section']}\n"
                 if "youtube" in res:
                     res_text += f"  \u25b6\ufe0f <b>YouTube:</b> <a href=\"{res['youtube']['url']}\">{res['youtube']['title']}</a>\n"
                 if "article" in res:
@@ -94,6 +94,7 @@ if __name__ == "__main__":
             lab_task = week.get("lab_task", "See daily focus above")
             project = week.get("project", "")
             github_goal = week.get("github_goal", "")
+            linkedin_goal = week.get("linkedin_goal", "")
             cert_focus = week.get("cert_focus", "")
 
             msg = (
@@ -108,6 +109,7 @@ if __name__ == "__main__":
                 f"{lab_task}\n\n"
                 f"\U0001f4c1 <b>Project</b>: {project}\n"
                 f"\U0001f4be <b>GitHub Goal</b>: {github_goal}\n"
+                f"\U0001f4f1 <b>LinkedIn Goal</b>: {linkedin_goal}\n"
                 f"{res_text}\n"
                 f"\u23f1 <b>3-Hour Study Block</b>\n"
                 f"\u2022 Hour 1 (0:00\u20141:00): Watch video + read docs from links above\n"
