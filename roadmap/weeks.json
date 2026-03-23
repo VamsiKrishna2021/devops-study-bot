@@ -1,225 +1,422 @@
-{
-  "start_date": "2026-03-23",
-  "weeks": [
-    {
-      "week": 1, "theme": "Linux & Bash Foundations",
-      "cert_focus": "CKA baseline / AWS CLI",
-      "days": {
-        "Monday":    {"topic": "Linux filesystem, permissions, users/groups", "lab": "Create users, set file ACLs, practice chmod/chown", "commit": "linux-permissions-lab"},
-        "Tuesday":   {"topic": "Bash scripting: variables, loops, conditionals", "lab": "Write a system-health-check.sh script", "commit": "bash-health-check"},
-        "Wednesday": {"topic": "Processes, cron, systemd services", "lab": "Write + enable a custom systemd service", "commit": "systemd-service-lab"},
-        "Thursday":  {"topic": "Networking CLI: ss, netstat, curl, dig, nmap", "lab": "Map open ports and DNS resolution on a VM", "commit": "networking-cli-lab"},
-        "Friday":    {"topic": "Git & GitHub: branching, PRs, rebase, hooks", "lab": "Set up pre-commit hook + PR workflow on a test repo", "commit": "git-workflow-lab"}
-      }
+[
+  {
+    "week": 1,
+    "month": 1,
+    "theme": "Linux CLI Mastery",
+    "start": "2026-03-23",
+    "end": "2026-03-29",
+    "daily_focus": {
+      "Mon": "File permissions, users/groups (chmod, chown, umask)",
+      "Tue": "Processes: ps, top, htop, kill, nice \u2014 systemd & journalctl",
+      "Wed": "Cron jobs, at, task scheduling, logrotate",
+      "Thu": "Networking: ip, ss, netstat, curl, wget, dig, nslookup",
+      "Fri": "SSH hardening, sshd_config, key-based auth, port forwarding",
+      "Sat": "LAB (4 hrs): System health report script (Project 1 begins)",
+      "Sun": "REVIEW + LinkedIn Post #1 + GitHub commit"
     },
-    {
-      "week": 2, "theme": "Docker & Containers",
-      "cert_focus": "CKA / Docker foundations",
-      "days": {
-        "Monday":    {"topic": "Docker architecture, images, containers, layers", "lab": "Pull nginx, run detached, exec in, inspect layers", "commit": "docker-basics-lab"},
-        "Tuesday":   {"topic": "Dockerfile: multi-stage builds, .dockerignore", "lab": "Multi-stage build for a Python Flask app", "commit": "dockerfile-multistage"},
-        "Wednesday": {"topic": "Docker networking: bridge, host, overlay", "lab": "Two containers communicating over a custom bridge", "commit": "docker-networking-lab"},
-        "Thursday":  {"topic": "Docker volumes & bind mounts, persistence", "lab": "PostgreSQL container with named volume", "commit": "docker-volumes-lab"},
-        "Friday":    {"topic": "Docker Compose: multi-service stacks", "lab": "Flask + Redis + Postgres compose stack", "commit": "docker-compose-stack"}
-      }
+    "lab_task": "Set up Ubuntu EC2 t2.micro on AWS Free Tier. Run all CLI commands on real EC2.",
+    "project": "Project 1: linux-system-health-monitor \u2014 bash script starts today",
+    "cert_focus": "None this week \u2014 build the foundation",
+    "github_goal": "Create GitHub portfolio org. Push monitor.sh skeleton.",
+    "linkedin_goal": "Write intro post: 'I'm making the leap \u2014 Salesforce Dev \u2192 DevOps'"
+  },
+  {
+    "week": 2,
+    "month": 1,
+    "theme": "Git/GitHub + Bash Scripting Intermediate",
+    "start": "2026-03-30",
+    "end": "2026-04-05",
+    "daily_focus": {
+      "Mon": "Git internals: commits, staging, .gitignore, branching (GitFlow vs trunk-based)",
+      "Tue": "Rebase, cherry-pick, merge conflicts, tagging releases",
+      "Wed": "GitHub: PRs, code reviews, branch protection rules, GitHub CLI (gh)",
+      "Thu": "Bash: arrays, functions, error handling (set -e, trap), argument parsing",
+      "Fri": "Bash: file I/O, regex with grep/sed/awk, log parsing",
+      "Sat": "LAB (4 hrs): COMPLETE Project 1 \u2014 full GitHub repo + README + screenshots",
+      "Sun": "Write first GitHub Actions workflow (.github/workflows/lint.yml)"
     },
-    {
-      "week": 3, "theme": "AWS Foundations & IAM",
-      "cert_focus": "AWS SAA",
-      "days": {
-        "Monday":    {"topic": "AWS global infra: regions, AZs, edge locations", "lab": "Map 3 regions with AZ counts using CLI", "commit": "aws-global-infra"},
-        "Tuesday":   {"topic": "IAM: users, groups, roles, policies, SCPs", "lab": "Create least-privilege IAM role for EC2 S3 read", "commit": "iam-least-privilege"},
-        "Wednesday": {"topic": "IAM: MFA, access keys, instance profiles, STS", "lab": "Enable MFA, generate temp credentials with STS", "commit": "iam-sts-lab"},
-        "Thursday":  {"topic": "AWS CLI + SDK: profiles, pagination, JMESPath", "lab": "Script to list all EC2 instances across regions", "commit": "aws-cli-multi-region"},
-        "Friday":    {"topic": "CloudTrail, Config, Trusted Advisor overview", "lab": "Enable CloudTrail + create a Config rule", "commit": "cloudtrail-config-lab"}
-      }
+    "lab_task": "Create and merge first PR with branch protection rule enforced.",
+    "project": "Project 1 COMPLETE + First GitHub Actions lint workflow",
+    "cert_focus": "None \u2014 still foundational",
+    "github_goal": "Project 1 repo live with README, architecture section, screenshots",
+    "linkedin_goal": "Post: 'Week 2 \u2014 What I learned about Linux that every DevOps engineer must know'"
+  },
+  {
+    "week": 3,
+    "month": 1,
+    "theme": "AWS Core \u2014 IAM \u00b7 VPC \u00b7 EC2 \u00b7 S3",
+    "start": "2026-04-06",
+    "end": "2026-04-12",
+    "daily_focus": {
+      "Mon": "IAM: users, groups, roles, policies (JSON), MFA, IAM best practices",
+      "Tue": "VPC: subnets (public/private), route tables, internet gateway, NAT gateway",
+      "Wed": "VPC: security groups vs NACLs, VPC peering, endpoints, flow logs",
+      "Thu": "EC2: instance types, AMIs, user data scripts, placement groups, Spot vs On-Demand",
+      "Fri": "S3: buckets, policies, versioning, lifecycle rules, SSE, cross-region replication",
+      "Sat": "LAB (4 hrs): Build VPC from scratch manually \u2014 no wizard. Repeat 3 times until fast.",
+      "Sun": "Start Project 2: aws_resource_inventory.py using Boto3"
     },
-    {
-      "week": 4, "theme": "AWS Compute (EC2 & Lambda)",
-      "cert_focus": "AWS SAA",
-      "days": {
-        "Monday":    {"topic": "EC2: instance types, AMIs, user data, placement groups", "lab": "Launch EC2 with user-data bootstrap script", "commit": "ec2-userdata-lab"},
-        "Tuesday":   {"topic": "EC2 Auto Scaling: launch templates, ASG, lifecycle hooks", "lab": "ASG with scale-out on CPU > 70%", "commit": "asg-scaling-lab"},
-        "Wednesday": {"topic": "ELB: ALB vs NLB vs CLB, target groups, health checks", "lab": "ALB routing two target groups by path", "commit": "alb-path-routing"},
-        "Thursday":  {"topic": "Lambda: triggers, execution role, layers, concurrency", "lab": "Lambda triggered by S3 upload → writes to DynamoDB", "commit": "lambda-s3-dynamo"},
-        "Friday":    {"topic": "ECS vs EKS vs Fargate decision matrix", "lab": "Deploy container on Fargate with Task Role", "commit": "fargate-task-lab"}
-      }
+    "lab_task": "Build full VPC manually: public + private subnets, IGW, NAT GW, route tables.",
+    "project": "Project 2: aws-resource-inventory-bot \u2014 Python + Boto3 starts today",
+    "cert_focus": "BEGIN Stephane Maarek SAA-C03 Udemy course \u2014 Sections 1\u20138",
+    "github_goal": "Push aws_resource_inventory.py skeleton with Boto3 EC2 list",
+    "linkedin_goal": "Post: 'AWS VPC from scratch \u2014 here is what confused me most'"
+  },
+  {
+    "week": 4,
+    "month": 1,
+    "theme": "AWS Continued (RDS \u00b7 ELB \u00b7 CloudWatch) + Docker Intro",
+    "start": "2026-04-13",
+    "end": "2026-04-19",
+    "daily_focus": {
+      "Mon": "RDS: Multi-AZ, Read Replicas, Aurora basics, parameter groups",
+      "Tue": "ELB (ALB vs NLB), Auto Scaling Groups, launch templates, scaling policies",
+      "Wed": "CloudWatch: metrics, alarms, logs, dashboards, EventBridge basics",
+      "Thu": "Docker: install, docker run/build/tag/push/pull, image layers explained",
+      "Fri": "Dockerfile: best practices, multi-stage builds, .dockerignore, layer caching",
+      "Sat": "LAB (4 hrs): Dockerize Python Flask app \u2192 push to Docker Hub AND AWS ECR",
+      "Sun": "MONTHLY REVIEW + Mock Test #1 (AWS SAA \u2014 Tutorials Dojo)"
     },
-    {
-      "week": 5, "theme": "AWS Storage & Databases",
-      "cert_focus": "AWS SAA",
-      "days": {
-        "Monday":    {"topic": "S3: storage classes, lifecycle, versioning, replication", "lab": "Lifecycle rule: Standard → IA → Glacier", "commit": "s3-lifecycle-lab"},
-        "Tuesday":   {"topic": "S3: bucket policies, presigned URLs, CORS, encryption", "lab": "Presigned URL generator in Python", "commit": "s3-presigned-url"},
-        "Wednesday": {"topic": "RDS: Multi-AZ, read replicas, parameter groups, snapshots", "lab": "RDS MySQL with Multi-AZ + read replica", "commit": "rds-multiaz-lab"},
-        "Thursday":  {"topic": "DynamoDB: keys, GSI/LSI, streams, DAX, capacity modes", "lab": "DynamoDB table with GSI + Lambda stream processor", "commit": "dynamo-gsi-stream"},
-        "Friday":    {"topic": "EFS, FSx, Storage Gateway, AWS Backup", "lab": "Mount EFS on two EC2 instances simultaneously", "commit": "efs-shared-mount"}
-      }
+    "lab_task": "Set CloudWatch billing alarm at $10 and $25 immediately on your AWS account.",
+    "project": "Project 2 COMPLETE \u2014 GitHub repo live with scheduled GitHub Actions run",
+    "cert_focus": "Maarek SAA Sections 9\u201312 (ELB, ASG, RDS) \u2014 complete this week",
+    "github_goal": "Project 2 repo: full README, sample HTML/CSV report output, GitHub Actions weekly trigger",
+    "linkedin_goal": "Post: 'Month 1 complete \u2014 here is what I shipped and what is next'"
+  },
+  {
+    "week": 5,
+    "month": 2,
+    "theme": "AWS Advanced \u2014 Lambda \u00b7 ECS \u00b7 Route53 \u00b7 CloudFront",
+    "start": "2026-04-20",
+    "end": "2026-04-26",
+    "daily_focus": {
+      "Mon": "Lambda + API Gateway: serverless architecture, triggers, IAM roles for Lambda",
+      "Tue": "ECS Fargate: task definitions, services, ECR integration",
+      "Wed": "Route 53: routing policies (weighted, latency, failover, geolocation), health checks",
+      "Thu": "CloudFront, WAF basics, Shield, AWS Certificate Manager (ACM)",
+      "Fri": "SQS, SNS, EventBridge: event-driven architecture patterns",
+      "Sat": "LAB (4 hrs): Build Project 3 \u2014 Serverless URL Shortener (Lambda + API GW + DynamoDB)",
+      "Sun": "AWS SAA Mock Test #2 (Tutorials Dojo) \u2014 target 70%+ before proceeding"
     },
-    {
-      "week": 6, "theme": "AWS Networking (VPC Deep Dive)",
-      "cert_focus": "AWS SAA",
-      "days": {
-        "Monday":    {"topic": "VPC: subnets, route tables, IGW, NAT GW, NACL vs SG", "lab": "3-tier VPC: public/private/data subnets", "commit": "vpc-3tier-lab"},
-        "Tuesday":   {"topic": "VPC Peering, Transit Gateway, VPN, Direct Connect", "lab": "Two VPC peering with overlapping CIDR workaround", "commit": "vpc-peering-lab"},
-        "Wednesday": {"topic": "Route 53: routing policies (weighted, latency, failover)", "lab": "Failover routing with health checks", "commit": "r53-failover-lab"},
-        "Thursday":  {"topic": "CloudFront: distributions, origins, cache behaviors, OAC", "lab": "CloudFront in front of S3 static site with OAC", "commit": "cloudfront-oac-lab"},
-        "Friday":    {"topic": "WAF, Shield, Network Firewall, GuardDuty", "lab": "WAF WebACL with rate-limit rule on ALB", "commit": "waf-rate-limit-lab"}
-      }
+    "lab_task": "Deploy Lambda function from CLI (not console). Practice aws lambda invoke.",
+    "project": "Project 3: serverless-url-shortener \u2014 full Terraform + Lambda + API Gateway",
+    "cert_focus": "Maarek SAA Sections 13\u201318 (Lambda, ECS, Route53, CloudFront, databases)",
+    "github_goal": "Project 3 repo live with architecture diagram + Terraform infra/ folder",
+    "linkedin_goal": "Post: 'I built a serverless URL shortener in AWS \u2014 here is the architecture'"
+  },
+  {
+    "week": 6,
+    "month": 2,
+    "theme": "Terraform Foundation \u2014 HCL \u00b7 State \u00b7 Modules",
+    "start": "2026-04-27",
+    "end": "2026-05-03",
+    "daily_focus": {
+      "Mon": "HCL syntax: providers, resources, variables, outputs, locals, data sources",
+      "Tue": "Terraform workflow: init, plan, apply, destroy \u2014 state file deep dive",
+      "Wed": "Remote state: S3 backend + DynamoDB state locking (critical for teams)",
+      "Thu": "Terraform modules: creating reusable VPC module and EC2 module",
+      "Fri": "count, for_each, dynamic blocks, depends_on, lifecycle meta-arguments",
+      "Sat": "LAB (4 hrs): Provision full VPC + EC2 + Security Group + S3 backend \u2014 Project 4 begins",
+      "Sun": "Review Terraform Associate 004 exam objectives \u2014 note 4 new topic areas"
     },
-    {
-      "week": 7, "theme": "AWS SAA Final Sprint",
-      "cert_focus": "AWS SAA — EXAM WEEK",
-      "days": {
-        "Monday":    {"topic": "SAA Sprint Day 1: IAM + EC2 + VPC review", "lab": "Practice exam set: 25 IAM/EC2/VPC questions", "commit": "saa-sprint-day1"},
-        "Tuesday":   {"topic": "SAA Sprint Day 2: S3 + RDS + DynamoDB review", "lab": "Practice exam set: 25 storage/DB questions", "commit": "saa-sprint-day2"},
-        "Wednesday": {"topic": "SAA Sprint Day 3: HA/DR patterns + serverless", "lab": "Practice exam set: 25 HA/serverless questions", "commit": "saa-sprint-day3"},
-        "Thursday":  {"topic": "SAA Sprint Day 4: Full practice exam 1 (65 questions)", "lab": "Timed: 130 min, review all wrong answers", "commit": "saa-mock-exam-1"},
-        "Friday":    {"topic": "SAA Sprint Day 5: Weak area review + exam-day checklist", "lab": "Focus on bottom 3 scoring domains", "commit": "saa-final-review"}
-      }
+    "lab_task": "Practice terraform state rm + terraform import on existing EC2 resource.",
+    "project": "Project 4: multi-env-aws-terraform \u2014 starts today (dev/staging/prod structure)",
+    "cert_focus": "START Zeal Vora Terraform Associate 004 Udemy course \u2014 Sections 1\u20135",
+    "github_goal": "Project 4: infra/modules/vpc and infra/environments/dev wired up",
+    "linkedin_goal": "Post: 'Why every DevOps engineer needs to learn Terraform (even if you know CloudFormation)'"
+  },
+  {
+    "week": 7,
+    "month": 2,
+    "theme": "CI/CD with GitHub Actions",
+    "start": "2026-05-04",
+    "end": "2026-05-10",
+    "daily_focus": {
+      "Mon": "GitHub Actions fundamentals: workflow syntax, triggers, jobs, steps, runners",
+      "Tue": "Build Docker image in Actions \u2192 push to ECR using OIDC (no static credentials!)",
+      "Wed": "Multi-stage pipelines: lint \u2192 test \u2192 build \u2192 deploy",
+      "Thu": "GitHub Environments: staging/prod, approval gates, environment secrets",
+      "Fri": "Deploy to AWS ECS from GitHub Actions using OIDC IAM role assumption",
+      "Sat": "LAB (4 hrs): COMPLETE Project 5 \u2014 full CI/CD pipeline: push \u2192 build \u2192 test \u2192 ECS deploy",
+      "Sun": "AWS SAA full mock exam #3 (Maarek practice tests) \u2014 score 72%+ to book exam"
     },
-    {
-      "week": 8, "theme": "Terraform Fundamentals",
-      "cert_focus": "Terraform 004",
-      "days": {
-        "Monday":    {"topic": "HCL syntax: providers, resources, variables, outputs", "lab": "Terraform deploy EC2 + SG from scratch", "commit": "tf-ec2-basics"},
-        "Tuesday":   {"topic": "Terraform state: local vs remote, state locking, S3 backend", "lab": "Migrate state to S3 + DynamoDB lock table", "commit": "tf-s3-backend"},
-        "Wednesday": {"topic": "Modules: writing, calling, versioning, registry", "lab": "Write reusable VPC module with inputs/outputs", "commit": "tf-vpc-module"},
-        "Thursday":  {"topic": "Data sources, locals, count vs for_each, dynamic blocks", "lab": "for_each to create multiple S3 buckets from a map", "commit": "tf-foreach-lab"},
-        "Friday":    {"topic": "Terraform CLI: plan, apply, destroy, fmt, validate, taint", "lab": "Full lifecycle: init→plan→apply→destroy→import", "commit": "tf-cli-lifecycle"}
-      }
+    "lab_task": "Break your own pipeline intentionally \u2014 debug it from logs. Practice failure recovery.",
+    "project": "Project 5: github-actions-cicd-pipeline \u2014 COMPLETE with OIDC, multi-stage, approval gates",
+    "cert_focus": "Maarek SAA full review \u2014 all sections complete. Begin Tutorials Dojo timed exams.",
+    "github_goal": "Project 5: pipeline YAML + architecture diagram showing each stage",
+    "linkedin_goal": "Post: 'I eliminated static AWS credentials from my CI/CD pipeline \u2014 here is how OIDC works'"
+  },
+  {
+    "week": 8,
+    "month": 2,
+    "theme": "AWS SAA FINAL SPRINT \u2192 \ud83c\udfaf EXAM DAY MAY 16",
+    "start": "2026-05-11",
+    "end": "2026-05-17",
+    "daily_focus": {
+      "Mon": "AWS SAA weak area deep dive \u2014 review every wrong answer from mock tests",
+      "Tue": "AWS FAQs: EC2, RDS, S3, VPC \u2014 read official AWS documentation summaries",
+      "Wed": "Docker Compose: multi-service apps, networking, volumes, environment files",
+      "Thu": "Final mock exam \u2014 full timed Tutorials Dojo exam. STOP studying new content.",
+      "Fri": "LIGHT REVIEW ONLY \u2014 no new concepts. Review flashcards only. Sleep early.",
+      "Sat": "\ud83c\udfc6 TAKE AWS SAA-C03 EXAM (morning slot booked)",
+      "Sun": "Celebrate! LinkedIn cert announcement. Start Docker Compose Project 6."
     },
-    {
-      "week": 9, "theme": "Terraform Advanced",
-      "cert_focus": "Terraform 004",
-      "days": {
-        "Monday":    {"topic": "Workspaces vs directory structure, environment patterns", "lab": "Dev/staging/prod via workspaces", "commit": "tf-workspaces-lab"},
-        "Tuesday":   {"topic": "Terraform Cloud: runs, VCS integration, Sentinel policies", "lab": "Connect HCP Terraform to GitHub repo + VCS run", "commit": "tf-cloud-vcs"},
-        "Wednesday": {"topic": "Sentinel: policy-as-code, soft/hard mandatory policies", "lab": "Write Sentinel policy to restrict instance types", "commit": "tf-sentinel-policy"},
-        "Thursday":  {"topic": "Terraform 004: ephemeral resources, provider functions, stacks", "lab": "Use provider functions (templatestring) in config", "commit": "tf-004-new-features"},
-        "Friday":    {"topic": "Terraform testing: terraform test, check blocks, preconditions", "lab": "Write test file for VPC module using terraform test", "commit": "tf-testing-lab"}
-      }
+    "lab_task": "Build Docker Compose stack: Nginx + Flask + PostgreSQL \u2014 understand networking between containers.",
+    "project": "Project 6 begins: k8s-multi-tier-app (Docker Compose \u2192 Kubernetes migration)",
+    "cert_focus": "\u26a0\ufe0f EXAM MILESTONE: Book when 3 mock tests avg \u2265 72%, no domain below 65%",
+    "github_goal": "All Month 1-2 projects polished and public",
+    "linkedin_goal": "\ud83c\udfc6 CERTIFICATION POST: AWS SAA pass announcement with tips post"
+  },
+  {
+    "week": 9,
+    "month": 3,
+    "theme": "Terraform Advanced \u2014 004 Topics \u00b7 HCP \u00b7 Modules",
+    "start": "2026-05-18",
+    "end": "2026-05-24",
+    "daily_focus": {
+      "Mon": "Terraform module registry, module versioning, nested modules",
+      "Tue": "HCP Terraform (formerly Terraform Cloud): workspaces, VCS integration, remote runs",
+      "Wed": "004 NEW: explicit depends_on, create_before_destroy, prevent_destroy lifecycle",
+      "Thu": "004 NEW: custom validation conditions (validation blocks in variables)",
+      "Fri": "004 NEW: ephemeral values, sensitive outputs, secrets management patterns",
+      "Sat": "LAB (4 hrs): Extend Project 4 \u2014 add modules, remote state, 3 environments",
+      "Sun": "Terraform 004 mock exam #1 \u2014 Bryan Krausen Udemy practice exam"
     },
-    {
-      "week": 10, "theme": "Terraform 004 Sprint",
-      "cert_focus": "Terraform 004 — EXAM WEEK",
-      "days": {
-        "Monday":    {"topic": "TF Sprint Day 1: IaC concepts + core workflow review", "lab": "25 practice questions: core workflow + IaC theory", "commit": "tf-sprint-day1"},
-        "Tuesday":   {"topic": "TF Sprint Day 2: State + modules + workspaces", "lab": "25 practice questions: state management + modules", "commit": "tf-sprint-day2"},
-        "Wednesday": {"topic": "TF Sprint Day 3: Terraform Cloud + HCP + Sentinel", "lab": "25 practice questions: Terraform Cloud features", "commit": "tf-sprint-day3"},
-        "Thursday":  {"topic": "TF Sprint Day 4: Full mock exam (57 questions, 60 min)", "lab": "Timed exam, review all wrong answers", "commit": "tf-mock-exam-1"},
-        "Friday":    {"topic": "TF Sprint Day 5: 004 gaps + exam-day checklist", "lab": "Focus: ephemeral resources, provider functions, stacks", "commit": "tf-final-review"}
-      }
+    "lab_task": "Implement a full Terraform workspace with dev/staging/prod and different variable files.",
+    "project": "Project 4 COMPLETE \u2014 full multi-environment with modules, remote state, CI/CD plan+apply",
+    "cert_focus": "Terraform 004: all Zeal Vora course sections complete + start SkillCertPro questions",
+    "github_goal": "Project 4: modules/, environments/, backend.tf, and Terraform plan in GitHub Actions",
+    "linkedin_goal": "Post: 'Terraform multi-environment setup \u2014 how teams manage dev/staging/prod'"
+  },
+  {
+    "week": 10,
+    "month": 3,
+    "theme": "Terraform 004 EXAM SPRINT \u2192 \ud83c\udfaf EXAM DAY MAY 30",
+    "start": "2026-05-25",
+    "end": "2026-05-31",
+    "daily_focus": {
+      "Mon": "Terraform exam objectives review \u2014 HCL syntax, state, providers, backends",
+      "Tue": "SkillCertPro Terraform 004 practice \u2014 full timed session, target 85%+",
+      "Wed": "Hands-on exam simulation: 60 min, timer on, no notes",
+      "Thu": "Review every wrong answer \u2014 create Anki cards for weak spots",
+      "Fri": "LIGHT REVIEW ONLY \u2014 flashcards, rest. No new content.",
+      "Sat": "\ud83c\udfc6 TAKE TERRAFORM ASSOCIATE 004 EXAM",
+      "Sun": "Celebrate! LinkedIn post. Begin Kubernetes fundamentals."
     },
-    {
-      "week": 11, "theme": "Kubernetes Fundamentals",
-      "cert_focus": "CKA",
-      "days": {
-        "Monday":    {"topic": "K8s architecture: control plane, etcd, kubelet, kube-proxy", "lab": "kubeadm cluster bootstrap (1 control + 1 worker)", "commit": "k8s-cluster-setup"},
-        "Tuesday":   {"topic": "Pods, ReplicaSets, Deployments, DaemonSets, StatefulSets", "lab": "Deploy nginx RS, roll update, rollback", "commit": "k8s-workloads-lab"},
-        "Wednesday": {"topic": "Services: ClusterIP, NodePort, LoadBalancer, ExternalName", "lab": "Expose Deployment with each service type", "commit": "k8s-services-lab"},
-        "Thursday":  {"topic": "ConfigMaps and Secrets: volume + env injection", "lab": "App consuming DB creds from Secret as env vars", "commit": "k8s-configmap-secret"},
-        "Friday":    {"topic": "kubectl: imperative commands, dry-run, explain, get -o yaml", "lab": "Generate 10 YAML manifests using --dry-run=client", "commit": "kubectl-imperative-lab"}
-      }
+    "lab_task": "Final Terraform drill: write a module from scratch, run plan/apply/destroy in < 10 minutes.",
+    "project": "None \u2014 exam week, focus only on cert",
+    "cert_focus": "\u26a0\ufe0f EXAM MILESTONE: Book when 3 mock tests avg \u2265 80%",
+    "github_goal": "Add Terraform cert badge to GitHub profile README",
+    "linkedin_goal": "\ud83c\udfc6 CERTIFICATION POST: Terraform Associate 004 pass announcement"
+  },
+  {
+    "week": 11,
+    "month": 3,
+    "theme": "Kubernetes Fundamentals",
+    "start": "2026-06-01",
+    "end": "2026-06-07",
+    "daily_focus": {
+      "Mon": "K8s architecture: control plane (API server, etcd, scheduler), worker nodes (kubelet, kube-proxy)",
+      "Tue": "Pods: lifecycle, multi-container pods, init containers, kubectl deep dive",
+      "Wed": "ReplicaSets, Deployments: rolling updates, rollbacks, deployment strategies",
+      "Thu": "Services: ClusterIP, NodePort, LoadBalancer, DNS resolution between pods",
+      "Fri": "Namespaces, labels, selectors, annotations \u2014 organizational patterns",
+      "Sat": "LAB (4 hrs): Set up Minikube/Kind locally \u2192 deploy multi-tier app (frontend/backend/db)",
+      "Sun": "KodeKloud CKA course \u2014 Module 1 and 2 complete"
     },
-    {
-      "week": 12, "theme": "Kubernetes Networking & Storage",
-      "cert_focus": "CKA",
-      "days": {
-        "Monday":    {"topic": "CNI plugins: Calico, Flannel, Weave", "lab": "Install Calico CNI, verify pod networking", "commit": "k8s-cni-calico"},
-        "Tuesday":   {"topic": "Network Policies: ingress/egress, namespace isolation", "lab": "Isolate namespace, allow only frontend→backend traffic", "commit": "k8s-network-policy"},
-        "Wednesday": {"topic": "Ingress: NGINX controller, TLS, path/host routing", "lab": "Ingress with TLS termination + 2 path-based backends", "commit": "k8s-ingress-tls"},
-        "Thursday":  {"topic": "PV, PVC, StorageClass, dynamic provisioning", "lab": "Dynamic PV with local-path provisioner for StatefulSet", "commit": "k8s-pv-dynamic"},
-        "Friday":    {"topic": "DNS in Kubernetes: CoreDNS, FQDN, service discovery", "lab": "Debug DNS with dnsutils pod, test cross-namespace", "commit": "k8s-dns-lab"}
-      }
+    "lab_task": "Practice kubectl explain, kubectl describe, kubectl get -o yaml on every object type.",
+    "project": "Project 6: k8s-multi-tier-app \u2014 begin Kubernetes manifests",
+    "cert_focus": "START Mumshad Mannambeth CKA course (KodeKloud/Udemy) \u2014 Sections 1\u20133",
+    "github_goal": "Project 6: deploy/ folder with pod/deployment/service YAMLs",
+    "linkedin_goal": "Post: 'Starting Kubernetes \u2014 here is what finally made the architecture click for me'"
+  },
+  {
+    "week": 12,
+    "month": 3,
+    "theme": "K8s Configuration & Workloads",
+    "start": "2026-06-08",
+    "end": "2026-06-14",
+    "daily_focus": {
+      "Mon": "ConfigMaps and Secrets: creating, mounting as volumes, env vars, sensitive data",
+      "Tue": "Persistent Volumes, PVCs, StorageClasses \u2014 dynamic provisioning",
+      "Wed": "Resource limits/requests, LimitRange, ResourceQuota, HPA (Horizontal Pod Autoscaler)",
+      "Thu": "Liveness/Readiness/Startup probes: why they matter in production",
+      "Fri": "DaemonSets, StatefulSets (databases), Jobs, CronJobs",
+      "Sat": "LAB (4 hrs): Deploy PostgreSQL + app on K8s with PVCs, ConfigMaps, Secrets \u2014 Project 7 begins",
+      "Sun": "KodeKloud scheduling module complete. MONTHLY REVIEW #3."
     },
-    {
-      "week": 13, "theme": "Kubernetes Security & RBAC",
-      "cert_focus": "CKA",
-      "days": {
-        "Monday":    {"topic": "RBAC: Roles, ClusterRoles, RoleBindings, subjects", "lab": "Create developer user with namespace-scoped RBAC", "commit": "k8s-rbac-lab"},
-        "Tuesday":   {"topic": "ServiceAccounts, token projection, workload identity", "lab": "Pod using SA with minimal RBAC to read ConfigMaps", "commit": "k8s-serviceaccount"},
-        "Wednesday": {"topic": "Security contexts, Pod Security Standards, seccomp", "lab": "Run pod as non-root with read-only root filesystem", "commit": "k8s-security-context"},
-        "Thursday":  {"topic": "Admission controllers: OPA Gatekeeper, LimitRange, ResourceQuota", "lab": "Apply ResourceQuota + LimitRange to a namespace", "commit": "k8s-admission-lab"},
-        "Friday":    {"topic": "etcd backup and restore — CKA critical skill", "lab": "etcdctl snapshot save + restore to new cluster state", "commit": "etcd-backup-restore"}
-      }
+    "lab_task": "Trigger HPA by running a load test with 'hey' or 'k6'. Screenshot pods scaling up.",
+    "project": "Project 7: eks-terraform-cluster \u2014 Terraform + EKS begins",
+    "cert_focus": "CKA KodeKloud: scheduling + logging/monitoring modules",
+    "github_goal": "Project 6 COMPLETE: all K8s manifests, HPA config, load test results in README",
+    "linkedin_goal": "Post: 'Month 3 complete \u2014 2 certifications earned, Kubernetes journey underway'"
+  },
+  {
+    "week": 13,
+    "month": 4,
+    "theme": "K8s Networking + RBAC + Ingress",
+    "start": "2026-06-15",
+    "end": "2026-06-21",
+    "daily_focus": {
+      "Mon": "K8s networking model: CNI, pod-to-pod comms, DNS (CoreDNS)",
+      "Tue": "Network Policies: podSelector, namespaceSelector, ingress/egress rules",
+      "Wed": "Ingress controllers: deploy NGINX Ingress, Ingress resources, TLS termination",
+      "Thu": "RBAC: Roles, ClusterRoles, RoleBindings, ClusterRoleBindings, ServiceAccounts",
+      "Fri": "K8s security: Pod Security Standards, securityContext, runAsNonRoot, read-only fs",
+      "Sat": "LAB (4 hrs): RBAC drill \u2014 namespace + ServiceAccount + Role + test with kubectl auth can-i",
+      "Sun": "Network Policy lab \u2014 restrict pod comms to only what is necessary (zero trust)"
     },
-    {
-      "week": 14, "theme": "Kubernetes Scheduling & Ops",
-      "cert_focus": "CKA",
-      "days": {
-        "Monday":    {"topic": "Scheduler: nodeSelector, nodeAffinity, podAffinity, taints/tolerations", "lab": "Schedule pods with affinity + taint-based repulsion", "commit": "k8s-scheduling-lab"},
-        "Tuesday":   {"topic": "Resource requests/limits, VPA, HPA, KEDA basics", "lab": "HPA scaling Deployment on CPU metric", "commit": "k8s-hpa-lab"},
-        "Wednesday": {"topic": "Cluster upgrades: kubeadm upgrade control-plane + workers", "lab": "Upgrade 1.28 → 1.29 cluster with kubeadm", "commit": "k8s-upgrade-lab"},
-        "Thursday":  {"topic": "Troubleshooting: CrashLoopBackOff, Pending, OOMKilled", "lab": "Break + debug 5 common pod failure scenarios", "commit": "k8s-troubleshoot-lab"},
-        "Friday":    {"topic": "Logging: kubectl logs, stern, fluentd, loki overview", "lab": "Set up Loki + Grafana for cluster log aggregation", "commit": "k8s-logging-stack"}
-      }
+    "lab_task": "Implement a Network Policy that allows ONLY frontend \u2192 backend comms. Block everything else.",
+    "project": "Project 7: EKS cluster with Terraform \u2014 VPC + managed node group + IRSA",
+    "cert_focus": "CKA KodeKloud: cluster maintenance + networking modules",
+    "github_goal": "Project 7: Terraform EKS module with IAM OIDC and cluster autoscaler Helm",
+    "linkedin_goal": "Post: 'Kubernetes RBAC explained simply \u2014 and why it matters for production security'"
+  },
+  {
+    "week": 14,
+    "month": 4,
+    "theme": "Helm + GitOps with ArgoCD + EKS",
+    "start": "2026-06-22",
+    "end": "2026-06-28",
+    "daily_focus": {
+      "Mon": "Helm: charts, templates, values files, helm install/upgrade/rollback",
+      "Tue": "Create a custom Helm chart for your application \u2014 parameterize everything",
+      "Wed": "ArgoCD: install, connect to GitHub repo, define Application manifest, GitOps sync",
+      "Thu": "EKS: create cluster with eksctl, node groups, managed node groups, Fargate profiles",
+      "Fri": "Terraform + EKS: use terraform-aws-modules/eks to provision cluster",
+      "Sat": "LAB (4 hrs): Project 8 \u2014 GitOps: Terraform provisions EKS \u2192 ArgoCD auto-deploys from GitHub",
+      "Sun": "KodeKloud: cluster maintenance + storage modules"
     },
-    {
-      "week": 15, "theme": "CI/CD Pipelines",
-      "cert_focus": "Portfolio + CKA application",
-      "days": {
-        "Monday":    {"topic": "GitHub Actions: triggers, jobs, steps, matrix, reusable workflows", "lab": "CI pipeline: lint → test → docker build → push to ECR", "commit": "gh-actions-ci-pipeline"},
-        "Tuesday":   {"topic": "GitHub Actions: OIDC with AWS, environment protection rules", "lab": "OIDC-based AWS deploy (no static credentials)", "commit": "gh-actions-oidc-aws"},
-        "Wednesday": {"topic": "ArgoCD: GitOps model, App, AppProject, sync policies", "lab": "ArgoCD deploy app from GitHub repo to K8s", "commit": "argocd-gitops-lab"},
-        "Thursday":  {"topic": "Helm: charts, values, templates, hooks, chart museum", "lab": "Package and deploy a Helm chart with staging/prod values", "commit": "helm-chart-lab"},
-        "Friday":    {"topic": "Full GitOps pipeline: GitHub → Actions → ECR → ArgoCD → K8s", "lab": "End-to-end pipeline for a Python microservice", "commit": "full-gitops-pipeline"}
-      }
+    "lab_task": "Roll back an ArgoCD deployment by reverting a git commit. Verify auto-sync kicks in.",
+    "project": "Project 7 COMPLETE + Project 8: gitops-argocd-eks starts",
+    "cert_focus": "CKA KodeKloud: security module + troubleshooting module",
+    "github_goal": "Project 8: app-repo/ and gitops-config/ repos with ArgoCD Application manifest",
+    "linkedin_goal": "Post: 'What is GitOps and why it is replacing kubectl apply in production'"
+  },
+  {
+    "week": 15,
+    "month": 4,
+    "theme": "Monitoring & Observability \u2014 Prometheus \u00b7 Grafana \u00b7 Loki",
+    "start": "2026-06-29",
+    "end": "2026-07-05",
+    "daily_focus": {
+      "Mon": "Prometheus: architecture (scrape model), metric types (counter/gauge/histogram), PromQL basics",
+      "Tue": "Deploy Prometheus + Grafana on K8s using kube-prometheus-stack Helm chart",
+      "Wed": "Build Grafana dashboards \u2014 CPU/memory/pod restarts, import community dashboards (315, 6417)",
+      "Thu": "AlertManager: alert rules, routing, silences, Slack webhook integration",
+      "Fri": "Logging: deploy Loki + Promtail (simpler than ELK for K8s) via Helm",
+      "Sat": "LAB (4 hrs): Project 9 \u2014 full observability stack on EKS with custom alert \u2192 Slack",
+      "Sun": "AWS CloudWatch Container Insights integration for EKS"
     },
-    {
-      "week": 16, "theme": "Monitoring & Observability",
-      "cert_focus": "Portfolio",
-      "days": {
-        "Monday":    {"topic": "Prometheus: scrape configs, metrics types, relabeling", "lab": "Prometheus scraping 3 exporters (node, cadvisor, app)", "commit": "prometheus-scrape-lab"},
-        "Tuesday":   {"topic": "Grafana: dashboards, alerts, data sources, provisioning", "lab": "5-panel K8s cluster dashboard from scratch", "commit": "grafana-dashboard-lab"},
-        "Wednesday": {"topic": "AlertManager: routes, receivers, inhibition, silences", "lab": "Telegram alert on PodCrashLoop > 3 times in 5 min", "commit": "alertmanager-telegram"},
-        "Thursday":  {"topic": "Distributed tracing: OpenTelemetry + Jaeger/Tempo", "lab": "Instrument Flask app with OTEL → Tempo traces", "commit": "otel-tracing-lab"},
-        "Friday":    {"topic": "AWS CloudWatch: metrics, logs, alarms, Container Insights", "lab": "Container Insights on EKS + alarm on CPU > 80%", "commit": "cloudwatch-insights"}
-      }
+    "lab_task": "Write a PromQL alert rule for pod crash looping > 3 times in 5 minutes. Test it by force-crashing a pod.",
+    "project": "Project 9: k8s-observability-stack \u2014 Prometheus + Grafana + Loki + AlertManager + Slack",
+    "cert_focus": "CKA KodeKloud mock exam #1 \u2014 identify all weak domains",
+    "github_goal": "Project 9: Helm values, alert rules, Grafana dashboard JSON exports, Slack screenshot",
+    "linkedin_goal": "Post: 'I built a full Kubernetes observability stack \u2014 here is what it shows in production'"
+  },
+  {
+    "week": 16,
+    "month": 4,
+    "theme": "DevSecOps + CKA Deep Prep",
+    "start": "2026-07-06",
+    "end": "2026-07-12",
+    "daily_focus": {
+      "Mon": "Trivy: container image scanning in CI pipeline \u2014 block on CRITICAL CVEs",
+      "Tue": "AWS Secrets Manager + Kubernetes External Secrets Operator \u2014 sync secrets to K8s",
+      "Wed": "CKA CRITICAL: etcd backup and restore (this WILL be on the exam)",
+      "Thu": "CKA CRITICAL: cluster upgrade (control plane \u2192 workers, one version at a time)",
+      "Fri": "CKA CRITICAL: node troubleshooting (describe node, kubelet logs, systemctl status kubelet)",
+      "Sat": "LAB (4 hrs): Project 10 \u2014 DevSecOps pipeline: Trivy + Checkov + gitleaks in GitHub Actions",
+      "Sun": "MONTHLY REVIEW #4 + KodeKloud CKA mock exam #2"
     },
-    {
-      "week": 17, "theme": "CKA Final Sprint",
-      "cert_focus": "CKA — EXAM WEEK",
-      "days": {
-        "Monday":    {"topic": "CKA Sprint Day 1: Cluster setup + workloads + scheduling", "lab": "killer.sh scenario set 1 (timed)", "commit": "cka-sprint-day1"},
-        "Tuesday":   {"topic": "CKA Sprint Day 2: Storage + networking + network policies", "lab": "killer.sh scenario set 2 (timed)", "commit": "cka-sprint-day2"},
-        "Wednesday": {"topic": "CKA Sprint Day 3: RBAC + security + troubleshooting", "lab": "killer.sh scenario set 3 (timed)", "commit": "cka-sprint-day3"},
-        "Thursday":  {"topic": "CKA Sprint Day 4: etcd backup, cluster upgrade, full mock", "lab": "Full 2-hour killer.sh environment simulation", "commit": "cka-mock-exam-1"},
-        "Friday":    {"topic": "CKA Sprint Day 5: Speed drills + exam-day checklist", "lab": "20 kubectl imperative speed drills under 60 seconds each", "commit": "cka-final-review"}
-      }
+    "lab_task": "Practice etcd backup restore 3 times until you can do it in under 5 minutes from memory.",
+    "project": "Project 10: devsecops-cicd-pipeline \u2014 COMPLETE with Trivy + Checkov + gitleaks + SARIF",
+    "cert_focus": "CKA: focus on etcd backup, cluster upgrade, node troubleshooting \u2014 exam critical topics",
+    "github_goal": "Project 10: full pipeline YAML with security scan results and GitHub Security tab screenshot",
+    "linkedin_goal": "Post: 'I added security scanning to my CI/CD pipeline \u2014 here is what Trivy found'"
+  },
+  {
+    "week": 17,
+    "month": 5,
+    "theme": "CKA Intensive \u2014 killer.sh",
+    "start": "2026-07-13",
+    "end": "2026-07-19",
+    "daily_focus": {
+      "Mon": "CKA weak areas from mock exams \u2014 targeted lab practice on every failed item",
+      "Tue": "CKA weak areas continued \u2014 drill until consistent, not just once",
+      "Wed": "killer.sh session 1: full 2-hr simulation \u2014 hardest simulator available",
+      "Thu": "Review every killer.sh wrong answer \u2014 20-min dedicated lab per failure",
+      "Fri": "Timed CKA practice: 2-hr full simulation with kubectl cheat sheet only",
+      "Sat": "killer.sh session 2 \u2014 target 80%+ before booking exam",
+      "Sun": "\ud83c\udfaf BOOK CKA EXAM for Week 19 (August 1)"
     },
-    {
-      "week": 18, "theme": "Infrastructure as Code at Scale",
-      "cert_focus": "Portfolio",
-      "days": {
-        "Monday":    {"topic": "Terragrunt: DRY configs, run-all, dependency blocks", "lab": "Terragrunt multi-env AWS setup (dev/prod)", "commit": "terragrunt-multienv"},
-        "Tuesday":   {"topic": "Ansible: playbooks, roles, inventories, vault", "lab": "Ansible role to configure a hardened Ubuntu server", "commit": "ansible-hardening-role"},
-        "Wednesday": {"topic": "Packer: AMI baking with Ansible provisioner", "lab": "Golden AMI with pre-installed Docker + CW agent", "commit": "packer-golden-ami"},
-        "Thursday":  {"topic": "AWS CDK vs Terraform — when to use each", "lab": "CDK stack replicating existing Terraform VPC", "commit": "cdk-vs-terraform-lab"},
-        "Friday":    {"topic": "IaC testing: Terratest, Checkov, tfsec, infracost", "lab": "Checkov + tfsec scan on Terraform repo, fix findings", "commit": "iac-security-scan"}
-      }
+    "lab_task": "Speed drill: given a broken cluster scenario, diagnose and fix in under 15 minutes.",
+    "project": "None \u2014 CKA exam focus week",
+    "cert_focus": "\u26a0\ufe0f PRE-EXAM MILESTONE: killer.sh score \u2265 80% required before booking",
+    "github_goal": "Update GitHub profile README with Terraform cert badge",
+    "linkedin_goal": "Post: 'Deep in CKA prep \u2014 here is what makes the Kubernetes exam different from everything else'"
+  },
+  {
+    "week": 18,
+    "month": 5,
+    "theme": "Portfolio Polish + Final Projects",
+    "start": "2026-07-20",
+    "end": "2026-07-26",
+    "daily_focus": {
+      "Mon": "Project 11: AWS cost optimization bot \u2014 Lambda + Cost Explorer + SNS \u2192 Slack",
+      "Tue": "Project 11 COMPLETE \u2014 test it, document it, push to GitHub",
+      "Wed": "Project 12: Disaster recovery automation \u2014 AWS Backup + Lambda restore test",
+      "Thu": "Project 12 COMPLETE \u2014 full README with RTO/RPO numbers",
+      "Fri": "Polish all 12 GitHub repos \u2014 consistent READMEs, architecture diagrams, badges",
+      "Sat": "LAB (4 hrs): Create GitHub profile README \u2014 skills table, cert badges, project links",
+      "Sun": "Create architecture diagrams for top 5 projects using draw.io or Excalidraw"
     },
-    {
-      "week": 19, "theme": "Platform Engineering & SRE",
-      "cert_focus": "Portfolio",
-      "days": {
-        "Monday":    {"topic": "SLIs, SLOs, SLAs, error budgets — Google SRE model", "lab": "Define SLOs for a web service, build burn rate alert", "commit": "slo-error-budget"},
-        "Tuesday":   {"topic": "Service mesh: Istio or Linkerd, mTLS, traffic management", "lab": "Istio canary deploy with traffic split 90/10", "commit": "istio-canary-lab"},
-        "Wednesday": {"topic": "Secrets management: Vault, AWS Secrets Manager, External Secrets Operator", "lab": "External Secrets Operator syncing Vault → K8s Secret", "commit": "external-secrets-lab"},
-        "Thursday":  {"topic": "FinOps: AWS Cost Explorer, tagging strategy, rightsizing", "lab": "Tag all resources, build cost allocation report", "commit": "finops-tagging-lab"},
-        "Friday":    {"topic": "Incident management: runbooks, postmortems, chaos engineering", "lab": "Write a runbook for PodCrashLoop + database failover", "commit": "sre-runbooks"}
-      }
+    "lab_task": "Ensure every project repo has: README, architecture PNG, Makefile, working CI badge.",
+    "project": "Project 11 + Project 12 COMPLETE. All 12 repos polished.",
+    "cert_focus": "Light CKA review only \u2014 no new concepts. Flashcards.",
+    "github_goal": "GitHub profile README live \u2014 pinned repos show your best 6 projects",
+    "linkedin_goal": "Post: 'I built 12 DevOps projects in 5 months \u2014 here is what my GitHub looks like now'"
+  },
+  {
+    "week": 19,
+    "month": 5,
+    "theme": "Interview Prep \u2192 \ud83c\udfaf CKA EXAM AUGUST 1",
+    "start": "2026-07-27",
+    "end": "2026-08-02",
+    "daily_focus": {
+      "Mon": "Linux + networking interview questions \u2014 practice out loud with a timer",
+      "Tue": "Kubernetes scenario questions \u2014 CrashLoopBackOff, node failure, StatefulSet vs Deployment",
+      "Wed": "Terraform + CI/CD questions \u2014 state, OIDC, rollback, zero-downtime deploys",
+      "Thu": "Behavioral questions \u2014 STAR format, career pivot narrative (Salesforce \u2192 DevOps story)",
+      "Fri": "LIGHT REVIEW ONLY \u2014 kubectl speed drills, rest, sleep early",
+      "Sat": "\ud83c\udfc6 TAKE CKA EXAM",
+      "Sun": "Celebrate! LinkedIn CKA announcement. Update resume."
     },
-    {
-      "week": 20, "theme": "Capstone Projects & Portfolio Polish",
-      "cert_focus": "Portfolio + Job Applications",
-      "days": {
-        "Monday":    {"topic": "Capstone Project 1: Full GitOps platform (code → prod)", "lab": "End-to-end: Terraform infra + ArgoCD deploy + monitoring", "commit": "capstone-gitops-platform"},
-        "Tuesday":   {"topic": "Capstone Project 2: Self-healing Kubernetes cluster", "lab": "HPA + PDB + custom alert → auto-remediation runbook", "commit": "capstone-self-healing"},
-        "Wednesday": {"topic": "Portfolio review: README quality, architecture diagrams", "lab": "Add architecture diagram to each major repo", "commit": "portfolio-diagrams"},
-        "Thursday":  {"topic": "LinkedIn DevOps portfolio update + resume refresh", "lab": "Update 3 bullet points per role with metrics/impact", "commit": "resume-update"},
-        "Friday":    {"topic": "Mock interview prep: behavioral + technical questions", "lab": "Record 5 STAR answers for DevOps behavioral questions", "commit": "interview-prep"}
-      }
-    }
-  ]
-}
+    "lab_task": "Record yourself answering 3 behavioral questions. Watch it back. Improve.",
+    "project": "None \u2014 exam and interview week",
+    "cert_focus": "\u26a0\ufe0f EXAM DAY: August 1 \u2014 CKA exam booked",
+    "github_goal": "All repos public, all READMEs complete",
+    "linkedin_goal": "\ud83c\udfc6 CERTIFICATION POST: CKA pass announcement + career pivot story"
+  },
+  {
+    "week": 20,
+    "month": 5,
+    "theme": "Mock Interviews + Job Applications Begin \ud83c\udfaf",
+    "start": "2026-08-03",
+    "end": "2026-08-09",
+    "daily_focus": {
+      "Mon": "Mock interview session 1 (Pramp or peer) \u2014 full 45-min technical interview",
+      "Tue": "Resume final polish \u2014 DevOps bullet points, projects, certifications section",
+      "Wed": "Mock interview session 2 \u2014 behavioral + system design",
+      "Thu": "LinkedIn 'Open to Work' activation + DM 5 DevOps engineers in your target companies",
+      "Fri": "Submit first 5 job applications \u2014 DevOps Engineer / SRE roles",
+      "Sat": "Apply to 5 more roles. Tailor resume per job description.",
+      "Sun": "FINAL REVIEW \u2014 you made it. 420 hours. 3 certs. 12 projects. Job search active."
+    },
+    "lab_task": "Final incident simulation: break a service, detect via monitoring, fix, write a postmortem.",
+    "project": "FINAL: All 12 projects live. GitHub green. LinkedIn polished.",
+    "cert_focus": "DONE: AWS SAA \u2705 + Terraform 004 \u2705 + CKA \u2705",
+    "github_goal": "GitHub profile complete \u2014 portfolio speaks for itself",
+    "linkedin_goal": "Post: 'I am officially open to DevOps Engineer / SRE opportunities' + full journey recap post"
+  }
+]
