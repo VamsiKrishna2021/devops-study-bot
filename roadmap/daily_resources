@@ -1,0 +1,940 @@
+{
+  "Linux file permissions chmod chown umask users groups": {
+    "udemy": {
+      "course": "Linux Mastery (Ziyad Yehia) \u2014 Udemy",
+      "section": "Section 3: File Permissions & Ownership"
+    },
+    "youtube": {
+      "title": "Linux File Permissions in 5 Minutes",
+      "url": "https://www.youtube.com/watch?v=I4EWvMFj37g"
+    },
+    "article": {
+      "title": "Linux Permissions Explained \u2014 DigitalOcean",
+      "url": "https://www.digitalocean.com/community/tutorials/linux-permissions-basics-and-how-to-use-umask-on-a-vps"
+    }
+  },
+  "Processes ps top htop kill nice systemd journalctl": {
+    "udemy": {
+      "course": "Linux Mastery (Ziyad Yehia) \u2014 Udemy",
+      "section": "Section 5: Processes & Service Management"
+    },
+    "youtube": {
+      "title": "systemd Explained \u2014 TechWorld with Nana",
+      "url": "https://www.youtube.com/watch?v=Kzpm-rGAXos"
+    },
+    "article": {
+      "title": "systemd Essentials \u2014 DigitalOcean",
+      "url": "https://www.digitalocean.com/community/tutorials/systemd-essentials-working-with-services-units-and-the-journal"
+    }
+  },
+  "Cron jobs at scheduling logrotate": {
+    "udemy": {
+      "course": "Linux Mastery (Ziyad Yehia) \u2014 Udemy",
+      "section": "Section 6: Scheduling Tasks with Cron"
+    },
+    "youtube": {
+      "title": "Cron Jobs in Linux \u2014 NetworkChuck",
+      "url": "https://www.youtube.com/watch?v=v952m13p-b4"
+    },
+    "article": {
+      "title": "Cron Job Guide \u2014 Crontab.guru",
+      "url": "https://crontab.guru/"
+    }
+  },
+  "Networking ip ss netstat curl wget dig nslookup": {
+    "udemy": {
+      "course": "Linux Mastery (Ziyad Yehia) \u2014 Udemy",
+      "section": "Section 9: Networking Fundamentals"
+    },
+    "youtube": {
+      "title": "Linux Networking Commands \u2014 David Bombal",
+      "url": "https://www.youtube.com/watch?v=IPvYjXCsTg8"
+    },
+    "article": {
+      "title": "Essential Linux Networking Commands \u2014 FreeCodeCamp",
+      "url": "https://www.freecodecamp.org/news/linux-networking-commands/"
+    }
+  },
+  "SSH hardening sshd_config key-based auth port forwarding": {
+    "udemy": {
+      "course": "Linux Mastery (Ziyad Yehia) \u2014 Udemy",
+      "section": "Section 10: SSH & Remote Access"
+    },
+    "youtube": {
+      "title": "SSH Tutorial for Beginners \u2014 TechWorld with Nana",
+      "url": "https://www.youtube.com/watch?v=ORcvSkgdA58"
+    },
+    "article": {
+      "title": "How to Harden SSH \u2014 DigitalOcean",
+      "url": "https://www.digitalocean.com/community/tutorials/how-to-harden-openssh-on-ubuntu-20-04"
+    }
+  },
+  "Git internals commits staging gitignore branching GitFlow trunk-based": {
+    "udemy": {
+      "course": "Git & GitHub Bootcamp (Colt Steele) \u2014 Udemy",
+      "section": "Section 2\u20134: Core Git Workflow + Branching"
+    },
+    "youtube": {
+      "title": "Git and GitHub for Beginners \u2014 freeCodeCamp",
+      "url": "https://www.youtube.com/watch?v=RGOj5yH7evk"
+    },
+    "article": {
+      "title": "Git Branching Strategies \u2014 Atlassian",
+      "url": "https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow"
+    }
+  },
+  "Rebase cherry-pick merge conflicts tagging releases": {
+    "udemy": {
+      "course": "Git & GitHub Bootcamp (Colt Steele) \u2014 Udemy",
+      "section": "Section 7\u20138: Rebasing, Cherry-pick, Tags"
+    },
+    "youtube": {
+      "title": "Git Rebase vs Merge \u2014 Fireship",
+      "url": "https://www.youtube.com/watch?v=CRlGDDprdOQ"
+    },
+    "article": {
+      "title": "git rebase Explained \u2014 Atlassian",
+      "url": "https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase"
+    }
+  },
+  "GitHub PRs code reviews branch protection GitHub CLI": {
+    "udemy": {
+      "course": "Git & GitHub Bootcamp (Colt Steele) \u2014 Udemy",
+      "section": "Section 10: Collaborating on GitHub"
+    },
+    "youtube": {
+      "title": "GitHub Pull Requests in 100 Seconds \u2014 Fireship",
+      "url": "https://www.youtube.com/watch?v=8lGpZkjnkt4"
+    },
+    "article": {
+      "title": "GitHub Branch Protection Rules Docs",
+      "url": "https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches"
+    }
+  },
+  "Bash scripting arrays functions error handling set -e trap argument parsing": {
+    "udemy": {
+      "course": "Linux Mastery (Ziyad Yehia) \u2014 Udemy",
+      "section": "Section 12: Bash Scripting Intermediate"
+    },
+    "youtube": {
+      "title": "Bash Scripting Full Course \u2014 freeCodeCamp",
+      "url": "https://www.youtube.com/watch?v=e7BufAVwDiM"
+    },
+    "article": {
+      "title": "Bash Error Handling Best Practices \u2014 Bash Hackers Wiki",
+      "url": "https://www.gnu.org/software/bash/manual/bash.html#The-Set-Builtin"
+    }
+  },
+  "Bash file IO regex grep sed awk log parsing": {
+    "udemy": {
+      "course": "Linux Mastery (Ziyad Yehia) \u2014 Udemy",
+      "section": "Section 13: Text Processing with grep/sed/awk"
+    },
+    "youtube": {
+      "title": "awk, sed, grep \u2014 Linux Tutorial \u2014 NetworkChuck",
+      "url": "https://www.youtube.com/watch?v=GyztlTVOGww"
+    },
+    "article": {
+      "title": "sed & awk One-Liners \u2014 Grymoire.com",
+      "url": "https://www.grymoire.com/Unix/Sed.html"
+    }
+  },
+  "IAM users groups roles policies MFA least privilege": {
+    "udemy": {
+      "course": "Stephane Maarek AWS SAA-C03 \u2014 Udemy",
+      "section": "Section 4: IAM & AWS CLI"
+    },
+    "youtube": {
+      "title": "AWS IAM Tutorial \u2014 TechWorld with Nana",
+      "url": "https://www.youtube.com/watch?v=iF9fs8Rw4Uo"
+    },
+    "article": {
+      "title": "IAM Best Practices \u2014 AWS Docs",
+      "url": "https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html"
+    }
+  },
+  "VPC subnets route tables internet gateway NAT gateway": {
+    "udemy": {
+      "course": "Stephane Maarek AWS SAA-C03 \u2014 Udemy",
+      "section": "Section 24: VPC Fundamentals"
+    },
+    "youtube": {
+      "title": "AWS VPC Explained \u2014 Be A Better Dev",
+      "url": "https://www.youtube.com/watch?v=g2JOHLHh4rI"
+    },
+    "article": {
+      "title": "VPC Deep Dive \u2014 AWS Docs",
+      "url": "https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html"
+    }
+  },
+  "VPC security groups NACLs peering endpoints flow logs": {
+    "udemy": {
+      "course": "Stephane Maarek AWS SAA-C03 \u2014 Udemy",
+      "section": "Section 25: VPC Advanced"
+    },
+    "youtube": {
+      "title": "Security Groups vs NACLs \u2014 AWS re:Post",
+      "url": "https://www.youtube.com/watch?v=tt4Y6z4pBDs"
+    },
+    "article": {
+      "title": "Security Groups vs NACLs \u2014 AWS Docs",
+      "url": "https://docs.aws.amazon.com/vpc/latest/userguide/vpc-security-groups.html"
+    }
+  },
+  "EC2 instance types AMIs user data placement groups Spot On-Demand": {
+    "udemy": {
+      "course": "Stephane Maarek AWS SAA-C03 \u2014 Udemy",
+      "section": "Section 5\u20137: EC2 Fundamentals + Solutions Architect Level"
+    },
+    "youtube": {
+      "title": "EC2 Tutorial for Beginners \u2014 freeCodeCamp",
+      "url": "https://www.youtube.com/watch?v=a9__D53WsMs"
+    },
+    "article": {
+      "title": "EC2 Instance Types \u2014 AWS Docs",
+      "url": "https://aws.amazon.com/ec2/instance-types/"
+    }
+  },
+  "S3 buckets policies versioning lifecycle encryption replication": {
+    "udemy": {
+      "course": "Stephane Maarek AWS SAA-C03 \u2014 Udemy",
+      "section": "Section 9: S3 Introduction + Section 22: S3 Advanced"
+    },
+    "youtube": {
+      "title": "AWS S3 Tutorial \u2014 TechWorld with Nana",
+      "url": "https://www.youtube.com/watch?v=e6w9LwZJFIA"
+    },
+    "article": {
+      "title": "S3 Developer Guide \u2014 AWS Docs",
+      "url": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html"
+    }
+  },
+  "RDS Multi-AZ Read Replicas Aurora parameter groups": {
+    "udemy": {
+      "course": "Stephane Maarek AWS SAA-C03 \u2014 Udemy",
+      "section": "Section 13: RDS, Aurora & ElastiCache"
+    },
+    "youtube": {
+      "title": "AWS RDS Tutorial \u2014 AWS with Nana",
+      "url": "https://www.youtube.com/watch?v=eMzCI7S1P9M"
+    },
+    "article": {
+      "title": "RDS Multi-AZ vs Read Replica \u2014 AWS Docs",
+      "url": "https://aws.amazon.com/rds/features/multi-az/"
+    }
+  },
+  "ELB ALB NLB Auto Scaling Groups launch templates scaling policies": {
+    "udemy": {
+      "course": "Stephane Maarek AWS SAA-C03 \u2014 Udemy",
+      "section": "Section 10: High Availability & Scalability \u2014 ELB & ASG"
+    },
+    "youtube": {
+      "title": "AWS Load Balancer Tutorial \u2014 Be A Better Dev",
+      "url": "https://www.youtube.com/watch?v=qpHLRc4Qt1E"
+    },
+    "article": {
+      "title": "ELB Overview \u2014 AWS Docs",
+      "url": "https://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/what-is-load-balancing.html"
+    }
+  },
+  "CloudWatch metrics alarms logs dashboards EventBridge": {
+    "udemy": {
+      "course": "Stephane Maarek AWS SAA-C03 \u2014 Udemy",
+      "section": "Section 20: CloudWatch, CloudTrail & Config"
+    },
+    "youtube": {
+      "title": "AWS CloudWatch Tutorial \u2014 TechWorld with Nana",
+      "url": "https://www.youtube.com/watch?v=I7EFLChc07M"
+    },
+    "article": {
+      "title": "CloudWatch Getting Started \u2014 AWS Docs",
+      "url": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/GettingStarted.html"
+    }
+  },
+  "Docker install run build tag push pull image layers": {
+    "udemy": {
+      "course": "Docker & Kubernetes (Stephen Grider) \u2014 Udemy",
+      "section": "Section 1\u20133: Docker Basics"
+    },
+    "youtube": {
+      "title": "Docker Tutorial for Beginners \u2014 TechWorld with Nana",
+      "url": "https://www.youtube.com/watch?v=3c-iBn73dDE"
+    },
+    "article": {
+      "title": "Docker Get Started Guide",
+      "url": "https://docs.docker.com/get-started/"
+    }
+  },
+  "Dockerfile best practices multi-stage builds dockerignore layer caching": {
+    "udemy": {
+      "course": "Docker & Kubernetes (Stephen Grider) \u2014 Udemy",
+      "section": "Section 4: Building Custom Images"
+    },
+    "youtube": {
+      "title": "Dockerfile Best Practices \u2014 Bret Fisher",
+      "url": "https://www.youtube.com/watch?v=t19MFAau_d4"
+    },
+    "article": {
+      "title": "Dockerfile Best Practices \u2014 Docker Docs",
+      "url": "https://docs.docker.com/build/building/best-practices/"
+    }
+  },
+  "Lambda API Gateway serverless triggers IAM roles": {
+    "udemy": {
+      "course": "Stephane Maarek AWS SAA-C03 \u2014 Udemy",
+      "section": "Section 19: Serverless \u2014 Lambda"
+    },
+    "youtube": {
+      "title": "AWS Lambda Tutorial \u2014 freeCodeCamp",
+      "url": "https://www.youtube.com/watch?v=eOBq__h4OJ4"
+    },
+    "article": {
+      "title": "Lambda Developer Guide \u2014 AWS Docs",
+      "url": "https://docs.aws.amazon.com/lambda/latest/dg/welcome.html"
+    }
+  },
+  "ECS Fargate task definitions services ECR": {
+    "udemy": {
+      "course": "Stephane Maarek AWS SAA-C03 \u2014 Udemy",
+      "section": "Section 26: ECS, ECR & Fargate"
+    },
+    "youtube": {
+      "title": "AWS ECS and Fargate Tutorial \u2014 TechWorld with Nana",
+      "url": "https://www.youtube.com/watch?v=I9VAMGEjW-Q"
+    },
+    "article": {
+      "title": "Amazon ECS Developer Guide",
+      "url": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/Welcome.html"
+    }
+  },
+  "Route 53 routing policies weighted latency failover geolocation health checks": {
+    "udemy": {
+      "course": "Stephane Maarek AWS SAA-C03 \u2014 Udemy",
+      "section": "Section 11: Route 53"
+    },
+    "youtube": {
+      "title": "AWS Route 53 \u2014 Be A Better Dev",
+      "url": "https://www.youtube.com/watch?v=10JKpg9eueM"
+    },
+    "article": {
+      "title": "Route 53 Routing Policies \u2014 AWS Docs",
+      "url": "https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html"
+    }
+  },
+  "CloudFront WAF Shield ACM Certificate Manager": {
+    "udemy": {
+      "course": "Stephane Maarek AWS SAA-C03 \u2014 Udemy",
+      "section": "Section 12: CloudFront & Global Accelerator"
+    },
+    "youtube": {
+      "title": "AWS CloudFront Explained \u2014 Be A Better Dev",
+      "url": "https://www.youtube.com/watch?v=AT-nHW3_SVI"
+    },
+    "article": {
+      "title": "CloudFront Developer Guide \u2014 AWS Docs",
+      "url": "https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Introduction.html"
+    }
+  },
+  "SQS SNS EventBridge event-driven architecture": {
+    "udemy": {
+      "course": "Stephane Maarek AWS SAA-C03 \u2014 Udemy",
+      "section": "Section 18: SQS, SNS & Kinesis"
+    },
+    "youtube": {
+      "title": "AWS SQS vs SNS vs EventBridge \u2014 Be A Better Dev",
+      "url": "https://www.youtube.com/watch?v=mXk0MNjlO7A"
+    },
+    "article": {
+      "title": "Amazon SQS Developer Guide",
+      "url": "https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/welcome.html"
+    }
+  },
+  "HCL syntax providers resources variables outputs locals data sources": {
+    "udemy": {
+      "course": "Zeal Vora HashiCorp Terraform Associate 004 \u2014 Udemy",
+      "section": "Section 2: Terraform Basics \u2014 HCL Syntax"
+    },
+    "youtube": {
+      "title": "Terraform Tutorial for Beginners \u2014 TechWorld with Nana",
+      "url": "https://www.youtube.com/watch?v=l5k1ai_GBDE"
+    },
+    "article": {
+      "title": "Terraform HCL Configuration Language \u2014 HashiCorp Docs",
+      "url": "https://developer.hashicorp.com/terraform/language"
+    }
+  },
+  "Terraform workflow init plan apply destroy state file": {
+    "udemy": {
+      "course": "Zeal Vora HashiCorp Terraform Associate 004 \u2014 Udemy",
+      "section": "Section 3: Terraform Workflow & State"
+    },
+    "youtube": {
+      "title": "Terraform State Explained \u2014 Sanjeev Thiyagarajan",
+      "url": "https://www.youtube.com/watch?v=EwXVKH8HH_4"
+    },
+    "article": {
+      "title": "Terraform State \u2014 HashiCorp Docs",
+      "url": "https://developer.hashicorp.com/terraform/language/state"
+    }
+  },
+  "Terraform remote state S3 backend DynamoDB state locking": {
+    "udemy": {
+      "course": "Zeal Vora HashiCorp Terraform Associate 004 \u2014 Udemy",
+      "section": "Section 4: Remote Backends & State Management"
+    },
+    "youtube": {
+      "title": "Terraform Remote State S3 Backend \u2014 Anton Putra",
+      "url": "https://www.youtube.com/watch?v=9kFVEJOkiHY"
+    },
+    "article": {
+      "title": "S3 Backend Configuration \u2014 HashiCorp Docs",
+      "url": "https://developer.hashicorp.com/terraform/language/backend/s3"
+    }
+  },
+  "Terraform modules reusable VPC EC2 module": {
+    "udemy": {
+      "course": "Zeal Vora HashiCorp Terraform Associate 004 \u2014 Udemy",
+      "section": "Section 5: Terraform Modules"
+    },
+    "youtube": {
+      "title": "Terraform Modules Tutorial \u2014 TechWorld with Nana",
+      "url": "https://www.youtube.com/watch?v=RslSXA3gLBs"
+    },
+    "article": {
+      "title": "Terraform Modules \u2014 HashiCorp Docs",
+      "url": "https://developer.hashicorp.com/terraform/language/modules"
+    }
+  },
+  "Terraform count for_each dynamic depends_on lifecycle": {
+    "udemy": {
+      "course": "Zeal Vora HashiCorp Terraform Associate 004 \u2014 Udemy",
+      "section": "Section 6: Meta-Arguments & Expressions"
+    },
+    "youtube": {
+      "title": "Terraform count vs for_each \u2014 Anton Putra",
+      "url": "https://www.youtube.com/watch?v=7_sFHiS6UjE"
+    },
+    "article": {
+      "title": "Meta-Arguments \u2014 HashiCorp Docs",
+      "url": "https://developer.hashicorp.com/terraform/language/meta-arguments/count"
+    }
+  },
+  "GitHub Actions workflow syntax triggers jobs steps runners": {
+    "udemy": {
+      "course": "GitHub Actions \u2014 The Complete Guide (Maximilian Schwarzm\u00fcller) \u2014 Udemy",
+      "section": "Section 2: GitHub Actions Fundamentals"
+    },
+    "youtube": {
+      "title": "GitHub Actions Tutorial \u2014 TechWorld with Nana",
+      "url": "https://www.youtube.com/watch?v=R8_veQiYBjI"
+    },
+    "article": {
+      "title": "GitHub Actions Quickstart \u2014 GitHub Docs",
+      "url": "https://docs.github.com/en/actions/writing-workflows/quickstart"
+    }
+  },
+  "GitHub Actions Docker build ECR push OIDC no static credentials": {
+    "udemy": {
+      "course": "GitHub Actions \u2014 The Complete Guide \u2014 Udemy",
+      "section": "Section 8: Deploying to AWS with OIDC"
+    },
+    "youtube": {
+      "title": "GitHub Actions OIDC AWS \u2014 Anton Putra",
+      "url": "https://www.youtube.com/watch?v=iko4KjFHFLQ"
+    },
+    "article": {
+      "title": "Configuring OIDC in AWS \u2014 GitHub Docs",
+      "url": "https://docs.github.com/en/actions/security-for-github-actions/security-hardening-your-deployments/configuring-openid-connect-in-amazon-web-services"
+    }
+  },
+  "CI/CD multi-stage pipeline lint test build deploy": {
+    "udemy": {
+      "course": "GitHub Actions \u2014 The Complete Guide \u2014 Udemy",
+      "section": "Section 5\u20136: Multi-Job Pipelines & Environments"
+    },
+    "youtube": {
+      "title": "CI/CD Pipeline Tutorial \u2014 TechWorld with Nana",
+      "url": "https://www.youtube.com/watch?v=R8_veQiYBjI&t=1000"
+    },
+    "article": {
+      "title": "Understanding GitHub Actions \u2014 GitHub Docs",
+      "url": "https://docs.github.com/en/actions/about-github-actions/understanding-github-actions"
+    }
+  },
+  "GitHub Environments secrets staging prod approval gates": {
+    "udemy": {
+      "course": "GitHub Actions \u2014 The Complete Guide \u2014 Udemy",
+      "section": "Section 7: Environments & Secrets"
+    },
+    "youtube": {
+      "title": "GitHub Environments and Approvals \u2014 Fireship",
+      "url": "https://www.youtube.com/watch?v=eB0nUzAI7M8"
+    },
+    "article": {
+      "title": "GitHub Environments Docs",
+      "url": "https://docs.github.com/en/actions/managing-workflow-runs-and-deployments/managing-deployments/managing-environments-for-deployment"
+    }
+  },
+  "Deploy AWS ECS GitHub Actions OIDC IAM role assumption": {
+    "udemy": {
+      "course": "GitHub Actions \u2014 The Complete Guide \u2014 Udemy",
+      "section": "Section 9: Deploying to ECS"
+    },
+    "youtube": {
+      "title": "Deploy to AWS ECS with GitHub Actions \u2014 Bret Fisher",
+      "url": "https://www.youtube.com/watch?v=7oSQfPcyRe0"
+    },
+    "article": {
+      "title": "Deploying to ECS \u2014 GitHub Actions Docs",
+      "url": "https://docs.github.com/en/actions/use-cases-and-examples/deploying/deploying-to-amazon-elastic-container-service"
+    }
+  },
+  "Terraform module registry versioning nested modules": {
+    "udemy": {
+      "course": "Zeal Vora Terraform 004 \u2014 Udemy",
+      "section": "Section 7: Terraform Registry & Module Versioning"
+    },
+    "youtube": {
+      "title": "Terraform Public Registry Modules \u2014 Anton Putra",
+      "url": "https://www.youtube.com/watch?v=9kFVEJOkiHY"
+    },
+    "article": {
+      "title": "Terraform Registry \u2014 registry.terraform.io",
+      "url": "https://registry.terraform.io/"
+    }
+  },
+  "HCP Terraform workspaces VCS integration remote runs": {
+    "udemy": {
+      "course": "Zeal Vora Terraform 004 \u2014 Udemy",
+      "section": "Section 9: HCP Terraform (Terraform Cloud)"
+    },
+    "youtube": {
+      "title": "Terraform Cloud Tutorial \u2014 HashiCorp",
+      "url": "https://www.youtube.com/watch?v=Ce3RNfRbdL0"
+    },
+    "article": {
+      "title": "HCP Terraform Docs \u2014 HashiCorp",
+      "url": "https://developer.hashicorp.com/terraform/cloud-docs"
+    }
+  },
+  "Terraform 004 depends_on create_before_destroy prevent_destroy lifecycle": {
+    "udemy": {
+      "course": "Zeal Vora Terraform 004 \u2014 Udemy",
+      "section": "Section 6: Lifecycle Rules (004 Exam Topics)"
+    },
+    "youtube": {
+      "title": "Terraform Lifecycle Rules \u2014 Anton Putra",
+      "url": "https://www.youtube.com/watch?v=5_g_pHf_VPk"
+    },
+    "article": {
+      "title": "Lifecycle Meta-Argument \u2014 HashiCorp Docs",
+      "url": "https://developer.hashicorp.com/terraform/language/meta-arguments/lifecycle"
+    }
+  },
+  "Terraform 004 custom validation conditions validation blocks variables": {
+    "udemy": {
+      "course": "Zeal Vora Terraform 004 \u2014 Udemy",
+      "section": "Section 5: Input Validation (004 NEW)"
+    },
+    "youtube": {
+      "title": "Terraform Variable Validation \u2014 HashiCorp YouTube",
+      "url": "https://www.youtube.com/watch?v=LVgP63BkhKQ"
+    },
+    "article": {
+      "title": "Custom Conditions \u2014 HashiCorp Docs",
+      "url": "https://developer.hashicorp.com/terraform/language/expressions/custom-conditions"
+    }
+  },
+  "Terraform 004 ephemeral values sensitive outputs secrets": {
+    "udemy": {
+      "course": "Zeal Vora Terraform 004 \u2014 Udemy",
+      "section": "Section 8: Sensitive Data & Ephemeral Values (004 NEW)"
+    },
+    "youtube": {
+      "title": "Terraform Sensitive Values \u2014 Anton Putra",
+      "url": "https://www.youtube.com/watch?v=FWpCQar9dHE"
+    },
+    "article": {
+      "title": "Ephemeral Values (004) \u2014 HashiCorp Docs",
+      "url": "https://developer.hashicorp.com/terraform/language/resources/ephemeral"
+    }
+  },
+  "Kubernetes architecture control plane API server etcd scheduler kubelet kube-proxy": {
+    "udemy": {
+      "course": "Mumshad Mannambeth CKA \u2014 Udemy/KodeKloud",
+      "section": "Section 2: Core Concepts \u2014 Architecture"
+    },
+    "youtube": {
+      "title": "Kubernetes Architecture Explained \u2014 TechWorld with Nana",
+      "url": "https://www.youtube.com/watch?v=umXEmn3cMkY"
+    },
+    "article": {
+      "title": "Kubernetes Components \u2014 K8s Docs",
+      "url": "https://kubernetes.io/docs/concepts/overview/components/"
+    }
+  },
+  "Kubernetes pods lifecycle multi-container init containers kubectl": {
+    "udemy": {
+      "course": "Mumshad Mannambeth CKA \u2014 KodeKloud",
+      "section": "Section 2: Pods"
+    },
+    "youtube": {
+      "title": "Kubernetes Pods Explained \u2014 TechWorld with Nana",
+      "url": "https://www.youtube.com/watch?v=5cNrTU6o3Fw"
+    },
+    "article": {
+      "title": "Pods \u2014 Kubernetes Docs",
+      "url": "https://kubernetes.io/docs/concepts/workloads/pods/"
+    }
+  },
+  "Kubernetes ReplicaSets Deployments rolling updates rollbacks": {
+    "udemy": {
+      "course": "Mumshad Mannambeth CKA \u2014 KodeKloud",
+      "section": "Section 2: ReplicaSets & Deployments"
+    },
+    "youtube": {
+      "title": "Kubernetes Deployments \u2014 TechWorld with Nana",
+      "url": "https://www.youtube.com/watch?v=mNK14yXIZF4"
+    },
+    "article": {
+      "title": "Deployments \u2014 Kubernetes Docs",
+      "url": "https://kubernetes.io/docs/concepts/workloads/controllers/deployment/"
+    }
+  },
+  "Kubernetes Services ClusterIP NodePort LoadBalancer DNS": {
+    "udemy": {
+      "course": "Mumshad Mannambeth CKA \u2014 KodeKloud",
+      "section": "Section 2: Services"
+    },
+    "youtube": {
+      "title": "Kubernetes Services Explained \u2014 TechWorld with Nana",
+      "url": "https://www.youtube.com/watch?v=T4Z7visMM4E"
+    },
+    "article": {
+      "title": "Services \u2014 Kubernetes Docs",
+      "url": "https://kubernetes.io/docs/concepts/services-networking/service/"
+    }
+  },
+  "Kubernetes namespaces labels selectors annotations": {
+    "udemy": {
+      "course": "Mumshad Mannambeth CKA \u2014 KodeKloud",
+      "section": "Section 2: Namespaces"
+    },
+    "youtube": {
+      "title": "Kubernetes Namespaces Explained \u2014 TechWorld with Nana",
+      "url": "https://www.youtube.com/watch?v=K3jNo4z5Jx8"
+    },
+    "article": {
+      "title": "Namespaces \u2014 Kubernetes Docs",
+      "url": "https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/"
+    }
+  },
+  "ConfigMaps Secrets mounting volumes environment variables": {
+    "udemy": {
+      "course": "Mumshad Mannambeth CKA \u2014 KodeKloud",
+      "section": "Section 5: Application Lifecycle \u2014 ConfigMaps & Secrets"
+    },
+    "youtube": {
+      "title": "Kubernetes ConfigMaps and Secrets \u2014 TechWorld with Nana",
+      "url": "https://www.youtube.com/watch?v=FAnQTgr04mU"
+    },
+    "article": {
+      "title": "ConfigMaps \u2014 Kubernetes Docs",
+      "url": "https://kubernetes.io/docs/concepts/configuration/configmap/"
+    }
+  },
+  "Kubernetes Persistent Volumes PVCs StorageClasses dynamic provisioning": {
+    "udemy": {
+      "course": "Mumshad Mannambeth CKA \u2014 KodeKloud",
+      "section": "Section 7: Storage"
+    },
+    "youtube": {
+      "title": "Kubernetes Volumes Explained \u2014 TechWorld with Nana",
+      "url": "https://www.youtube.com/watch?v=0swOh5C3OVM"
+    },
+    "article": {
+      "title": "Persistent Volumes \u2014 Kubernetes Docs",
+      "url": "https://kubernetes.io/docs/concepts/storage/persistent-volumes/"
+    }
+  },
+  "Kubernetes resource limits requests LimitRange ResourceQuota HPA": {
+    "udemy": {
+      "course": "Mumshad Mannambeth CKA \u2014 KodeKloud",
+      "section": "Section 3: Scheduling \u2014 Resource Limits"
+    },
+    "youtube": {
+      "title": "Kubernetes Resource Management \u2014 TechWorld with Nana",
+      "url": "https://www.youtube.com/watch?v=7cKqbgnJRcQ"
+    },
+    "article": {
+      "title": "Resource Management for Pods \u2014 Kubernetes Docs",
+      "url": "https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/"
+    }
+  },
+  "Kubernetes liveness readiness startup probes": {
+    "udemy": {
+      "course": "Mumshad Mannambeth CKA \u2014 KodeKloud",
+      "section": "Section 5: Probes"
+    },
+    "youtube": {
+      "title": "Kubernetes Probes \u2014 TechWorld with Nana",
+      "url": "https://www.youtube.com/watch?v=mxEvAPQRwhw"
+    },
+    "article": {
+      "title": "Configure Liveness & Readiness Probes \u2014 Kubernetes Docs",
+      "url": "https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/"
+    }
+  },
+  "Kubernetes DaemonSets StatefulSets Jobs CronJobs": {
+    "udemy": {
+      "course": "Mumshad Mannambeth CKA \u2014 KodeKloud",
+      "section": "Section 2: DaemonSets / Section 5: StatefulSets"
+    },
+    "youtube": {
+      "title": "Kubernetes StatefulSets \u2014 TechWorld with Nana",
+      "url": "https://www.youtube.com/watch?v=pPQKAR1pA9U"
+    },
+    "article": {
+      "title": "StatefulSets \u2014 Kubernetes Docs",
+      "url": "https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/"
+    }
+  },
+  "Kubernetes networking CNI pod-to-pod communication CoreDNS": {
+    "udemy": {
+      "course": "Mumshad Mannambeth CKA \u2014 KodeKloud",
+      "section": "Section 9: Networking"
+    },
+    "youtube": {
+      "title": "Kubernetes Networking Explained \u2014 TechWorld with Nana",
+      "url": "https://www.youtube.com/watch?v=5cNrTU6o3Fw"
+    },
+    "article": {
+      "title": "Cluster Networking \u2014 Kubernetes Docs",
+      "url": "https://kubernetes.io/docs/concepts/cluster-administration/networking/"
+    }
+  },
+  "Kubernetes Network Policies podSelector namespaceSelector ingress egress": {
+    "udemy": {
+      "course": "Mumshad Mannambeth CKA \u2014 KodeKloud",
+      "section": "Section 9: Network Policies"
+    },
+    "youtube": {
+      "title": "Kubernetes Network Policies Tutorial \u2014 Anton Putra",
+      "url": "https://www.youtube.com/watch?v=8Is4LqgpGe0"
+    },
+    "article": {
+      "title": "Network Policies \u2014 Kubernetes Docs",
+      "url": "https://kubernetes.io/docs/concepts/services-networking/network-policies/"
+    }
+  },
+  "Kubernetes Ingress NGINX Ingress controller TLS termination": {
+    "udemy": {
+      "course": "Mumshad Mannambeth CKA \u2014 KodeKloud",
+      "section": "Section 9: Ingress"
+    },
+    "youtube": {
+      "title": "Kubernetes Ingress Explained \u2014 TechWorld with Nana",
+      "url": "https://www.youtube.com/watch?v=80Ew_fsV4rM"
+    },
+    "article": {
+      "title": "Ingress \u2014 Kubernetes Docs",
+      "url": "https://kubernetes.io/docs/concepts/services-networking/ingress/"
+    }
+  },
+  "Kubernetes RBAC Roles ClusterRoles RoleBindings ServiceAccounts": {
+    "udemy": {
+      "course": "Mumshad Mannambeth CKA \u2014 KodeKloud",
+      "section": "Section 6: Security \u2014 RBAC"
+    },
+    "youtube": {
+      "title": "Kubernetes RBAC Explained \u2014 TechWorld with Nana",
+      "url": "https://www.youtube.com/watch?v=jvhKOAyD8S8"
+    },
+    "article": {
+      "title": "RBAC Authorization \u2014 Kubernetes Docs",
+      "url": "https://kubernetes.io/docs/reference/access-authn-authz/rbac/"
+    }
+  },
+  "Kubernetes Pod Security Standards securityContext runAsNonRoot": {
+    "udemy": {
+      "course": "Mumshad Mannambeth CKA \u2014 KodeKloud",
+      "section": "Section 6: Security \u2014 Pod Security"
+    },
+    "youtube": {
+      "title": "Kubernetes Security Context \u2014 Anton Putra",
+      "url": "https://www.youtube.com/watch?v=s7LlGs5qkBA"
+    },
+    "article": {
+      "title": "Pod Security Standards \u2014 Kubernetes Docs",
+      "url": "https://kubernetes.io/docs/concepts/security/pod-security-standards/"
+    }
+  },
+  "Helm charts templates values files install upgrade rollback": {
+    "udemy": {
+      "course": "Mumshad Mannambeth CKA \u2014 KodeKloud",
+      "section": "Section 10: Helm"
+    },
+    "youtube": {
+      "title": "Helm Explained \u2014 TechWorld with Nana",
+      "url": "https://www.youtube.com/watch?v=-ykwb1d0DXU"
+    },
+    "article": {
+      "title": "Helm Docs \u2014 Getting Started",
+      "url": "https://helm.sh/docs/intro/quickstart/"
+    }
+  },
+  "ArgoCD GitOps sync GitHub repo Application manifest": {
+    "udemy": {
+      "course": "GitOps with ArgoCD (Mumshad Mannambeth) \u2014 KodeKloud",
+      "section": "Section 2: ArgoCD Installation & Setup"
+    },
+    "youtube": {
+      "title": "ArgoCD Tutorial \u2014 TechWorld with Nana",
+      "url": "https://www.youtube.com/watch?v=MeU5_k9ssrs"
+    },
+    "article": {
+      "title": "ArgoCD Getting Started \u2014 ArgoCD Docs",
+      "url": "https://argo-cd.readthedocs.io/en/stable/getting_started/"
+    }
+  },
+  "AWS EKS eksctl managed node groups Fargate profiles": {
+    "udemy": {
+      "course": "Stephane Maarek AWS SAA-C03 / EKS Deep Dive \u2014 Udemy",
+      "section": "Section 26: EKS"
+    },
+    "youtube": {
+      "title": "AWS EKS Tutorial \u2014 TechWorld with Nana",
+      "url": "https://www.youtube.com/watch?v=p6xDCz00TxU"
+    },
+    "article": {
+      "title": "Amazon EKS Getting Started \u2014 AWS Docs",
+      "url": "https://docs.aws.amazon.com/eks/latest/userguide/getting-started.html"
+    }
+  },
+  "Prometheus architecture scrape model metrics types PromQL": {
+    "udemy": {
+      "course": "Prometheus & Grafana (Bogdan Stashchuk) \u2014 Udemy",
+      "section": "Section 2\u20133: Prometheus Fundamentals + PromQL"
+    },
+    "youtube": {
+      "title": "Prometheus Tutorial \u2014 TechWorld with Nana",
+      "url": "https://www.youtube.com/watch?v=h4Sl21AKiDg"
+    },
+    "article": {
+      "title": "Prometheus Getting Started",
+      "url": "https://prometheus.io/docs/prometheus/latest/getting_started/"
+    }
+  },
+  "Grafana dashboards kube-prometheus-stack Helm CPU memory dashboards": {
+    "udemy": {
+      "course": "Prometheus & Grafana (Bogdan Stashchuk) \u2014 Udemy",
+      "section": "Section 5: Grafana Dashboards"
+    },
+    "youtube": {
+      "title": "Grafana Tutorial \u2014 TechWorld with Nana",
+      "url": "https://www.youtube.com/watch?v=lILY8eSspEo"
+    },
+    "article": {
+      "title": "Grafana Getting Started",
+      "url": "https://grafana.com/docs/grafana/latest/getting-started/"
+    }
+  },
+  "AlertManager alert rules routing silences Slack integration": {
+    "udemy": {
+      "course": "Prometheus & Grafana \u2014 Udemy",
+      "section": "Section 6: AlertManager Configuration"
+    },
+    "youtube": {
+      "title": "Prometheus AlertManager Tutorial \u2014 Anton Putra",
+      "url": "https://www.youtube.com/watch?v=6l9gL-s2V_s"
+    },
+    "article": {
+      "title": "AlertManager Configuration \u2014 Prometheus Docs",
+      "url": "https://prometheus.io/docs/alerting/latest/configuration/"
+    }
+  },
+  "Loki Promtail Grafana logging Kubernetes log aggregation": {
+    "udemy": {
+      "course": "Prometheus & Grafana \u2014 Udemy",
+      "section": "Section 7: Loki & Log Aggregation"
+    },
+    "youtube": {
+      "title": "Grafana Loki Tutorial \u2014 TechWorld with Nana",
+      "url": "https://www.youtube.com/watch?v=h_GGd7HfKQ8"
+    },
+    "article": {
+      "title": "Grafana Loki Getting Started",
+      "url": "https://grafana.com/docs/loki/latest/get-started/"
+    }
+  },
+  "Trivy container image scanning CVE CI pipeline security gates": {
+    "udemy": {
+      "course": "DevSecOps Bootcamp (Zeal Vora) \u2014 Udemy",
+      "section": "Section 4: Container Security Scanning with Trivy"
+    },
+    "youtube": {
+      "title": "Trivy Container Scanning Tutorial \u2014 TechWorld with Nana",
+      "url": "https://www.youtube.com/watch?v=bgYrhQ6rTXA"
+    },
+    "article": {
+      "title": "Trivy Documentation",
+      "url": "https://aquasecurity.github.io/trivy/latest/"
+    }
+  },
+  "AWS Secrets Manager Kubernetes External Secrets Operator sync": {
+    "udemy": {
+      "course": "DevSecOps Bootcamp \u2014 Udemy",
+      "section": "Section 6: Secrets Management"
+    },
+    "youtube": {
+      "title": "Kubernetes External Secrets Tutorial \u2014 Anton Putra",
+      "url": "https://www.youtube.com/watch?v=SyRZe5YVCVk"
+    },
+    "article": {
+      "title": "External Secrets Operator Docs",
+      "url": "https://external-secrets.io/latest/"
+    }
+  },
+  "CKA etcd backup restore ETCDCTL snapshot save": {
+    "udemy": {
+      "course": "Mumshad Mannambeth CKA \u2014 KodeKloud",
+      "section": "Section 4: Cluster Maintenance \u2014 etcd Backup"
+    },
+    "youtube": {
+      "title": "Kubernetes etcd Backup and Restore \u2014 Mumshad",
+      "url": "https://www.youtube.com/watch?v=qRPNuT080Hk"
+    },
+    "article": {
+      "title": "Backing up etcd \u2014 Kubernetes Docs",
+      "url": "https://kubernetes.io/docs/tasks/administer-cluster/configure-upgrade-etcd/#backing-up-an-etcd-cluster"
+    }
+  },
+  "Kubernetes cluster upgrade kubeadm drain uncordon workers": {
+    "udemy": {
+      "course": "Mumshad Mannambeth CKA \u2014 KodeKloud",
+      "section": "Section 4: Cluster Maintenance \u2014 OS Upgrades & K8s Versions"
+    },
+    "youtube": {
+      "title": "Kubernetes Cluster Upgrade \u2014 KodeKloud",
+      "url": "https://www.youtube.com/watch?v=Jnhfg0vFioI"
+    },
+    "article": {
+      "title": "Upgrade a Cluster \u2014 Kubernetes Docs",
+      "url": "https://kubernetes.io/docs/tasks/administer-cluster/kubeadm/kubeadm-upgrade/"
+    }
+  },
+  "Kubernetes node troubleshooting kubelet logs systemctl certificate": {
+    "udemy": {
+      "course": "Mumshad Mannambeth CKA \u2014 KodeKloud",
+      "section": "Section 11: Troubleshooting"
+    },
+    "youtube": {
+      "title": "Kubernetes Troubleshooting \u2014 TechWorld with Nana",
+      "url": "https://www.youtube.com/watch?v=HL10bLHUBgk"
+    },
+    "article": {
+      "title": "Troubleshoot Clusters \u2014 Kubernetes Docs",
+      "url": "https://kubernetes.io/docs/tasks/debug/debug-cluster/"
+    }
+  }
+}
