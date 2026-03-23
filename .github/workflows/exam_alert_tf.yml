@@ -1,0 +1,28 @@
+name: Terraform 004 Exam Alert
+
+on:
+  schedule:
+    # May 23, 2026 8:00 AM CDT = 1:00 PM UTC
+    - cron: '0 13 23 5 *'
+  workflow_dispatch:
+
+jobs:
+  send-alert:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Send Terraform 004 exam alert
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python scripts/exam_alert.py terraform-004
