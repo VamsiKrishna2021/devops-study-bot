@@ -1,6 +1,6 @@
 # 🤖 DevOps Study Bot
 
-> Automated Slack reminders for a 5-month DevOps mastery roadmap.
+> Automated Telegram reminders for a 5-month DevOps mastery roadmap.
 > Built by a Salesforce Developer transitioning to DevOps/SRE.
 > Powered by GitHub Actions — zero servers, zero cost.
 
@@ -26,7 +26,7 @@
 
 | # | Workflow | Schedule | Purpose |
 |---|---|---|---|
-| 1 | `daily_reminder.yml` | Mon–Fri 5:45 PM CDT | Today's exact study focus + 3-hr block breakdown |
+| 1 | `daily_reminder.yml` | Mon–Fri 5:45 PM CDT | Today's exact study focus + 3-hr block breakdown + learning resources |
 | 2 | `weekly_review.yml` | Sunday 7:00 PM CDT | Full weekly review + self-assessment questions + scorecard |
 | 3 | `exam_alert_aws.yml` | May 9 8:00 AM CDT (once) | 7-day AWS SAA final sprint plan + top topics + exam traps |
 | 4 | `exam_alert_tf.yml` | May 23 8:00 AM CDT (once) | 7-day Terraform 004 final sprint plan + 004-specific topics |
@@ -38,32 +38,36 @@
 ## ⚙️ Setup (5 minutes)
 
 ### Step 1 — Fork or clone this repo
+
 ```bash
 git clone https://github.com/YOUR_USERNAME/devops-study-bot.git
 cd devops-study-bot
 ```
 
-### Step 2 — Create a Slack Incoming Webhook
-1. Go to https://api.slack.com/apps
-2. Click **Create New App** → **From scratch**
-3. Name it `DevOps Study Bot`, select your workspace
-4. Click **Incoming Webhooks** → toggle **On**
-5. Click **Add New Webhook to Workspace** → select a channel (e.g., `#devops-study`)
-6. Copy the webhook URL (starts with `https://hooks.slack.com/services/...`)
+### Step 2 — Create a Telegram Bot
 
-### Step 3 — Add GitHub Secret
+1. Open Telegram and search for **@BotFather**
+2. Send `/newbot` and follow the prompts
+3. Name your bot (e.g., `DevOps Study Bot`)
+4. Copy the **bot token** (looks like `123456:ABC-DEF...`)
+5. Send a message to your new bot, then visit `https://api.telegram.org/bot<YOUR_TOKEN>/getUpdates` to find your **chat ID**
+
+### Step 3 — Add GitHub Secrets
+
 1. Go to your GitHub repo → **Settings** → **Secrets and variables** → **Actions**
 2. Click **New repository secret**
-3. Name: `SLACK_WEBHOOK_URL`
-4. Value: paste your Slack webhook URL
-5. Click **Add secret**
+3. Add **two** secrets:
+   - Name: `TELEGRAM_BOT_TOKEN` → Value: your bot token
+   - Name: `TELEGRAM_CHAT_ID` → Value: your chat ID
 
 ### Step 4 — Enable GitHub Actions
+
 1. Go to **Actions** tab in your repo
 2. Click **Enable Actions**
 3. All 6 workflows are now active and will run on their schedules
 
 ### Step 5 — Test immediately
+
 ```bash
 # Trigger any workflow manually from the Actions tab
 # Click workflow → Run workflow → Run workflow
@@ -84,31 +88,34 @@ devops-study-bot/
 │       ├── exam_alert_cka.yml      # Task 5: July 25 (CKA alert)
 │       └── monthly_checkin.yml     # Task 6: 23rd monthly
 ├── scripts/
-│   ├── daily_reminder.py           # Week-aware daily study focus
-│   ├── weekly_review.py            # Weekly scorecard + self-assessment
-│   ├── exam_alert.py               # Pre-exam sprint plan by cert name
-│   └── monthly_checkin.py          # Monthly milestone review
+│   ├── daily_reminder.py         # Week-aware daily study focus + resources
+│   ├── weekly_review.py          # Weekly scorecard + self-assessment
+│   ├── exam_alert.py             # Pre-exam sprint plan by cert name
+│   └── monthly_checkin.py        # Monthly milestone review
 ├── roadmap/
-│   └── weeks.json                  # All 20 weeks with daily tasks embedded
+│   ├── weeks.json                # All 20 weeks with daily tasks embedded
+│   └── daily_resources.json      # Udemy, YouTube, article links per topic
+├── requirements.txt              # Python dependencies
 └── README.md
 ```
 
 ---
 
-## 🔔 What Each Slack Message Contains
+## 🔔 What Each Telegram Message Contains
 
 ### Daily Reminder (5:45 PM weekdays)
-- Today's exact topic (e.g., "Tuesday: Network Policies: podSelector, namespaceSelector")
+- Today's exact topic (e.g., "Tue: Network Policies: podSelector, namespaceSelector")
 - This week's lab task
-- Certification focus for the week
-- GitHub commit goal
-- LinkedIn goal
+- Project and GitHub commit goal
+- LinkedIn goal for the week
+- Learning resources (Udemy course + section, YouTube video, article)
 - Your full 3-hour block breakdown (theory / lab / notes / quiz)
-- Day X of 140 progress counter
+- Day X of 100 progress counter with visual progress bar
 
 ### Weekly Review (Sunday 7 PM)
 - Completion checklist for the week
 - 5 self-assessment questions specific to this week's topics
+- Top learning resources from the week
 - Scorecard template (theory / hands-on / GitHub / LinkedIn / cert prep)
 - What to do if any score is below 7/10
 - Preview of next week
@@ -130,22 +137,23 @@ devops-study-bot/
 
 ## 💡 Customization
 
-To adjust a schedule, edit the `cron:` line in the workflow YAML.
-[Cron reference → crontab.guru](https://crontab.guru)
+To adjust a schedule, edit the `cron:` line in the workflow YAML. [Cron reference → crontab.guru](https://crontab.guru/)
 
 To add a new reminder type, add a new `.py` script in `scripts/` and a new workflow in `.github/workflows/`.
+
+> **Note:** Cron schedules use UTC. CDT = UTC-5 (March–November), CST = UTC-6 (November–March). Adjust cron times if needed when daylight saving changes.
 
 ---
 
 ## 🧠 Skills This Bot Itself Demonstrates
 
 > This bot is also **Portfolio Project 0** — it shows:
+>
 > - GitHub Actions automation (scheduled workflows)
 > - Python scripting (JSON data processing, HTTP requests)
-> - Slack webhook integration
-> - Config-driven design (roadmap/weeks.json drives all messages)
+> - Telegram Bot API integration
+> - Config-driven design (roadmap/weeks.json + daily_resources.json drive all messages)
+> - Fuzzy keyword matching for resource linking
 > - No servers, no cost, fully automated
 
----
-
-*Built as part of a 5-month DevOps mastery roadmap. March → August 2026.*
+Built as part of a 5-month DevOps mastery roadmap. March → August 2026.
