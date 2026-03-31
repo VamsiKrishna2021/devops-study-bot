@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Daily Study Reminder — fires Mon-Fri 5:45 PM CDT via GitHub Actions."""
+"""Daily Study Reminder — fires daily at 5:45 PM CDT via GitHub Actions."""
 import json, os, requests
 from datetime import date, datetime
 
@@ -68,7 +68,7 @@ if __name__ == "__main__":
         if not topic:
             send(f"No task scheduled for {day_short} in Week {week_num}.")
         else:
-            total_days = len(weeks) * 5
+            total_days = len(weeks) * 7
             filled = int((study_day / total_days) * 20)
             bar = chr(9608) * filled + chr(9617) * (20 - filled)
             pct = round((study_day / total_days) * 100, 1)
