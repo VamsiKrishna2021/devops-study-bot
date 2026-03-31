@@ -6,7 +6,7 @@ from datetime import date, datetime
 BOT_TOKEN = os.environ["TELEGRAM_BOT_TOKEN"]
 CHAT_ID   = os.environ["TELEGRAM_CHAT_ID"]
 API_URL   = f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage"
-START_DATE = date(2026, 3, 23)
+START_DATE = date(2026, 3, 31)
 
 DAY_MAP = {
     0: "Mon", 1: "Tue", 2: "Wed", 3: "Thu", 4: "Fri", 5: "Sat", 6: "Sun"
