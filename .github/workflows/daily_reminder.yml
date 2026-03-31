@@ -2,8 +2,8 @@ name: Daily Study Reminder
 
 on:
   schedule:
-    # Mon-Fri 5:45 PM CDT = 10:45 PM UTC
-    - cron: '45 22 * * 1-5'
+    # Daily 5:45 PM CDT = 10:45 PM UTC
+    - cron: '45 22 * * *'
   workflow_dispatch:
 
 jobs:
